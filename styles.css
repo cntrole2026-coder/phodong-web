@@ -39,6 +39,7 @@ body {
     scroll-behavior: smooth;
     word-break: keep-all;
     overflow-wrap: break-word;
+    padding-bottom: 110px;
 }
 
 .font-cute {
@@ -675,18 +676,31 @@ section {
 }
 
 .pricing-header .price {
-    font-size: 3rem;
-    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 0.2rem;
     margin-bottom: 1.5rem;
 }
 
-.pricing-header .price span {
-    font-size: 1rem;
-    font-weight: 400;
+.pricing-header .price .number {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--text-dark);
+}
+
+.pricing-header .price span:not(.number) {
+    font-size: 1.2rem;
+    font-weight: 600;
     color: var(--text-light);
 }
 
-.pricing-card.popular .price span {
+.pricing-card.popular .price .number {
+    color: var(--white);
+}
+
+.pricing-card.popular .price span:not(.number) {
     color: rgba(255, 255, 255, 0.8);
 }
 
