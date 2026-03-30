@@ -54,18 +54,8 @@
                 </div>
             </div>
             <div class="hero-visual fade-up visible">
-                <div class="mockup">
-                    <div class="mockup-header">
-                        <i class="ri-camera-lens-fill"></i> 소파를 인식하는 중...
-                    </div>
-                    <div class="scan-box">
-                        <div class="scan-line"></div>
-                        <i class="ri-bear-smile-fill mockup-icon"></i>
-                    </div>
-                    <div class="card-result">
-                        <h4 class="font-cute"><i class="ri-star-smile-fill"></i> 호기심 많은 곰돌이</h4>
-                        <p class="font-story">"안녕! 소파 뒤에 숨어있던 나 생각 했니? 오늘 모험 매니저가 되어줘!"</p>
-                    </div>
+                <div class="mockup-image-wrapper">
+                    <img src="assets/hero_mockup.png" alt="포동 앱 메인 스캔 디자인" class="hero-mockup-img">
                 </div>
                 <div class="floating-bubble bubble-1"><i class="ri-book-read-fill"></i></div>
                 <div class="floating-bubble bubble-2"><i class="ri-sparkling-fill"></i></div>
@@ -180,15 +170,12 @@
                 <h2 class="font-cute">서비스 요금제</h2>
                 <p>포동과 함께 아이의 상상력을 무한대로 키워보세요.</p>
                 <!-- Billing Toggle -->
-                <div class="billing-toggle fade-up"
-                    style="margin-top:2.5rem; display:inline-flex; background:var(--white); padding:0.4rem; border-radius:50px; box-shadow:var(--glass-shadow); border:2px solid #E9ECEF;">
-                    <button id="btn-monthly" class="btn"
-                        style="border:none; border-radius:40px; background:var(--primary); color:white; padding: 0.6em 1.5em; font-weight:700;">월간</button>
-                    <button id="btn-annual" class="btn"
-                        style="border:none; border-radius:40px; background:transparent; color:var(--text-light); padding: 0.6em 1.5em; font-weight:700;">연간
-                        <span
-                            style="font-size:0.8rem; color:var(--primary); background:rgba(255,126,103,0.1); padding:4px 8px; border-radius:10px; margin-left:4px;">17%
-                            할인</span></button>
+                <div class="billing-toggle fade-up">
+                    <div class="toggle-bg"></div>
+                    <button id="btn-monthly" class="btn toggle-btn active">월간</button>
+                    <button id="btn-annual" class="btn toggle-btn">연간
+                        <span class="discount-badge">17% 할인</span>
+                    </button>
                 </div>
             </div>
             <div class="pricing-grid">
@@ -214,7 +201,7 @@
                     <div class="pricing-header">
                         <h3 class="font-cute">프로</h3>
                         <div class="price">₩<span id="price-pro">7,900</span><span>/월</span></div>
-                        <p>가장 인기 있는 기본 패키지</p>
+                        <p>합리적인 필수 패키지</p>
                     </div>
                     <ul class="pricing-features">
                         <li><i class="ri-check-fill" style="color:var(--primary)"></i> <strong>동화 하루 5편</strong></li>
@@ -250,20 +237,16 @@
 
             <script>
                 document.getElementById('btn-monthly').addEventListener('click', function () {
-                    this.style.background = 'var(--primary)';
-                    this.style.color = 'white';
-                    var ann = document.getElementById('btn-annual');
-                    ann.style.background = 'transparent';
-                    ann.style.color = 'var(--text-light)';
+                    this.classList.add('active');
+                    document.getElementById('btn-annual').classList.remove('active');
+                    document.querySelector('.billing-toggle').classList.remove('annual-active');
                     document.getElementById('price-pro').innerText = '7,900';
                     document.getElementById('price-family').innerText = '19,900';
                 });
                 document.getElementById('btn-annual').addEventListener('click', function () {
-                    this.style.background = 'var(--primary)';
-                    this.style.color = 'white';
-                    var mon = document.getElementById('btn-monthly');
-                    mon.style.background = 'transparent';
-                    mon.style.color = 'var(--text-light)';
+                    this.classList.add('active');
+                    document.getElementById('btn-monthly').classList.remove('active');
+                    document.querySelector('.billing-toggle').classList.add('annual-active');
                     document.getElementById('price-pro').innerText = '6,583';
                     document.getElementById('price-family').innerText = '16,583';
                 });
@@ -320,73 +303,27 @@
                 <h2>이렇게 생겼어요</h2>
                 <p>아이와 함께 사용할 화면을 미리 살펴보세요.</p>
             </div>
-            <div style="display: flex; gap: 2rem; justify-content: center; margin-top: 3rem; flex-wrap: wrap;"
-                class="fade-up">
+            <div class="previews-wrapper fade-up">
                 <!-- Screen 1 -->
-                <div
-                    style="width: 220px; background: #1a1a2e; border-radius: 35px; padding: 1.5rem 1rem; box-shadow: 0 30px 60px rgba(0,0,0,0.2); flex-shrink: 0;">
-                    <div
-                        style="background: var(--bg-color); border-radius: 20px; padding: 1.5rem; text-align: center; min-height: 360px; display: flex; flex-direction: column; justify-content: center; gap: 1rem;">
-                        <i class="ri-settings-4-fill" style="font-size: 2.5rem; color: var(--primary);"></i>
-                        <h4 style="font-size: 1rem; color: var(--text-dark);">오늘의 이야기 설정</h4>
-                        <div
-                            style="background: rgba(255,126,103,0.1); border-radius: 12px; padding: 0.8rem; font-size: 0.8rem; color: var(--primary); font-weight: 700;">
-                            🦕 공룡 세계</div>
-                        <div
-                            style="background: rgba(135,206,235,0.1); border-radius: 12px; padding: 0.8rem; font-size: 0.8rem; color: var(--secondary); font-weight: 700;">
-                            💪 용기 기르기</div>
-                        <div
-                            style="background: #f8f9fa; border-radius: 12px; padding: 0.8rem; font-size: 0.8rem; color: var(--text-light);">
-                            나이: 6세 · 이름: 지우</div>
+                <div class="preview-card">
+                    <div class="preview-img-container">
+                        <img src="assets/preview_1.png" alt="오늘의 이야기 설정">
                     </div>
-                    <div
-                        style="text-align: center; margin-top: 0.8rem; font-size: 0.8rem; color: rgba(255,255,255,0.5);">
-                        ① 설정하기</div>
+                    <div class="preview-label">① 설정하기</div>
                 </div>
                 <!-- Screen 2 -->
-                <div
-                    style="width: 220px; background: #1a1a2e; border-radius: 35px; padding: 1.5rem 1rem; box-shadow: 0 30px 60px rgba(0,0,0,0.2); flex-shrink: 0; transform: translateY(-20px);">
-                    <div
-                        style="background: #000; border-radius: 20px; padding: 1rem; text-align: center; min-height: 360px; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end;">
-                        <div
-                            style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 5rem;">
-                            🧸</div>
-                        <div
-                            style="position: absolute; top: 1rem; left: 1rem; background: rgba(255,126,103,0.9); color: white; border-radius: 8px; padding: 0.3rem 0.8rem; font-size: 0.75rem; font-weight: 700;">
-                            ● 인식 중...</div>
-                        <div
-                            style="background: rgba(255,255,255,0.95); border-radius: 15px; padding: 1rem; font-size: 0.85rem;">
-                            <strong style="color: var(--primary);">인형 → 용감한 곰순이</strong><br>
-                            <span style="color: var(--text-light); font-size: 0.75rem;">"두려워할 필요 없어, 내가 함께야!"</span>
-                        </div>
+                <div class="preview-card center-card">
+                    <div class="preview-img-container">
+                        <img src="assets/preview_2.png" alt="사물 스캔">
                     </div>
-                    <div
-                        style="text-align: center; margin-top: 0.8rem; font-size: 0.8rem; color: rgba(255,255,255,0.5);">
-                        ② 사물 스캔</div>
+                    <div class="preview-label">② 사물 스캔</div>
                 </div>
                 <!-- Screen 3 -->
-                <div
-                    style="width: 220px; background: #1a1a2e; border-radius: 35px; padding: 1.5rem 1rem; box-shadow: 0 30px 60px rgba(0,0,0,0.2); flex-shrink: 0;">
-                    <div
-                        style="background: var(--bg-color); border-radius: 20px; padding: 1.5rem 1rem; min-height: 360px; display: flex; flex-direction: column; gap: 0.8rem;">
-                        <div style="font-size: 1rem; font-weight: 800; color: var(--text-dark);">📖 지우의 특별한 모험</div>
-                        <div
-                            style="background: white; border-radius: 12px; padding: 1rem; font-size: 0.8rem; color: var(--text-dark); line-height: 1.6; flex: 1;">
-                            어느 날 저녁, 용감한 곰순이가 지우에게 말했어요. "오늘 밤 우리 함께 공룡 동굴을 찾으러 가자!"</div>
-                        <div style="display: flex; align-items: center; gap: 0.5rem;">
-                            <div
-                                style="width: 35px; height: 35px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                                <i class="ri-volume-up-fill" style="color: white; font-size: 1rem;"></i>
-                            </div>
-                            <div style="flex: 1; height: 4px; background: #eee; border-radius: 2px;">
-                                <div style="width: 40%; height: 100%; background: var(--primary); border-radius: 2px;">
-                                </div>
-                            </div>
-                        </div>
+                <div class="preview-card">
+                    <div class="preview-img-container">
+                        <img src="assets/preview_3.png" alt="동화 읽기">
                     </div>
-                    <div
-                        style="text-align: center; margin-top: 0.8rem; font-size: 0.8rem; color: rgba(255,255,255,0.5);">
-                        ③ 동화 읽기</div>
+                    <div class="preview-label">③ 동화 읽기</div>
                 </div>
             </div>
         </div>
