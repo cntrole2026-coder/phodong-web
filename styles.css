@@ -1,5 +1,6 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Jua&display=swap');
+
 :root {
     --primary: #FF7E67;
     --primary-hover: #E86B56;
@@ -9,11 +10,11 @@
     --text-dark: #2B2D42;
     --text-light: #6C757D;
     --white: #FFFFFF;
-    
+
     --glass-bg: rgba(255, 255, 255, 0.75);
     --glass-border: 1px solid rgba(255, 255, 255, 0.6);
     --glass-shadow: 0 10px 30px rgba(43, 45, 66, 0.05);
-    
+
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
@@ -26,7 +27,7 @@
 body {
     font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
     background-color: var(--bg-color);
-    background-image: 
+    background-image:
         radial-gradient(at 0% 0%, rgba(255, 126, 103, 0.04) 0px, transparent 50%),
         radial-gradient(at 100% 0%, rgba(135, 206, 235, 0.08) 0px, transparent 50%),
         radial-gradient(at 100% 100%, rgba(255, 126, 103, 0.04) 0px, transparent 50%),
@@ -40,11 +41,23 @@ body {
     overflow-wrap: break-word;
 }
 
-.font-cute { font-family: 'Jua', sans-serif; font-weight: 400; }
-.font-story { font-family: 'Gowun Dodum', sans-serif; font-weight: 400; }
+.font-cute {
+    font-family: 'Jua', sans-serif;
+    font-weight: 400;
+}
+
+.font-story {
+    font-family: 'Gowun Dodum', sans-serif;
+    font-weight: 400;
+}
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 800;
     letter-spacing: -0.02em;
     line-height: 1.3;
@@ -80,7 +93,8 @@ p {
 }
 
 section {
-    padding: 8rem 0; /* 숨 쉴 수 있는 여백(White space) 대폭 추가 */
+    padding: 8rem 0;
+    /* 숨 쉴 수 있는 여백(White space) 대폭 추가 */
     position: relative;
 }
 
@@ -187,7 +201,8 @@ section {
 
 .btn-primary:hover {
     transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 15px 30px rgba(255, 126, 103, 0.45), 0 0 20px rgba(255, 126, 103, 0.6); /* 강력한 Glow 효과 */
+    box-shadow: 0 15px 30px rgba(255, 126, 103, 0.45), 0 0 20px rgba(255, 126, 103, 0.6);
+    /* 강력한 Glow 효과 */
 }
 
 .btn-secondary {
@@ -254,9 +269,17 @@ section {
 }
 
 @keyframes floatBg {
-    0% { transform: translate(0, 0) scale(1) rotate(0deg); }
-    50% { transform: translate(30px, -30px) scale(1.05) rotate(180deg); }
-    100% { transform: translate(-30px, 30px) scale(1) rotate(360deg); }
+    0% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(30px, -30px) scale(1.05) rotate(180deg);
+    }
+
+    100% {
+        transform: translate(-30px, 30px) scale(1) rotate(360deg);
+    }
 }
 
 .hero-inner {
@@ -311,7 +334,7 @@ section {
     border: var(--glass-border);
     border-radius: 30px;
     padding: 2rem;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
     transform: rotateY(-10deg) rotateX(5deg);
     transition: transform 0.5s ease;
     cursor: default;
@@ -354,9 +377,17 @@ section {
 }
 
 @keyframes scan {
-    0% { top: 0; }
-    50% { top: 100%; }
-    100% { top: 0; }
+    0% {
+        top: 0;
+    }
+
+    50% {
+        top: 100%;
+    }
+
+    100% {
+        top: 0;
+    }
 }
 
 .mockup-icon {
@@ -366,8 +397,16 @@ section {
 }
 
 @keyframes pulseIcon {
-    0% { transform: scale(1); opacity: 0.6; }
-    100% { transform: scale(1.1); opacity: 1; color: var(--primary); }
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: scale(1.1);
+        opacity: 1;
+        color: var(--primary);
+    }
 }
 
 .card-result {
@@ -377,15 +416,20 @@ section {
     background: var(--white);
     padding: 1.5rem;
     border-radius: 20px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
     max-width: 250px;
     transform: translateZ(30px);
     animation: floatResult 4s infinite alternate ease-in-out;
 }
 
 @keyframes floatResult {
-    0% { transform: translateZ(30px) translateY(0); }
-    100% { transform: translateZ(30px) translateY(-15px); }
+    0% {
+        transform: translateZ(30px) translateY(0);
+    }
+
+    100% {
+        transform: translateZ(30px) translateY(-15px);
+    }
 }
 
 .card-result h4 {
@@ -430,8 +474,13 @@ section {
 }
 
 @keyframes float {
-    0% { transform: translateY(0) rotate(0); }
-    100% { transform: translateY(-20px) rotate(10deg); }
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+
+    100% {
+        transform: translateY(-20px) rotate(10deg);
+    }
 }
 
 /* Section Title */
@@ -454,17 +503,20 @@ section {
 
 .feature-card {
     background: var(--white);
-    padding: 3.5rem 2.5rem; /* 카드 내부 패딩 증가 */
+    padding: 3.5rem 2.5rem;
+    /* 카드 내부 패딩 증가 */
     border-radius: 30px;
     box-shadow: 0 10px 30px rgba(43, 45, 66, 0.04);
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); /* 부드러운 물리엔진 느낌 */
-    border: 1px solid rgba(0,0,0,0.02);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    /* 부드러운 물리엔진 느낌 */
+    border: 1px solid rgba(0, 0, 0, 0.02);
     text-align: center;
 }
 
 .feature-card:hover {
     transform: translateY(-15px);
-    box-shadow: 0 25px 50px rgba(0,0,0,0.08); /* 부양 효과 극대화 */
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
+    /* 부양 효과 극대화 */
     border: 1px solid rgba(255, 126, 103, 0.1);
 }
 
@@ -499,6 +551,21 @@ section {
     transform: scale(1.1) rotate(5deg);
 }
 
+.feature-card:nth-child(4) .feature-icon {
+    background: rgba(255, 159, 67, 0.1);
+    color: #FF9F43;
+}
+
+.feature-card:nth-child(5) .feature-icon {
+    background: rgba(155, 89, 182, 0.1);
+    color: #9B59B6;
+}
+
+.feature-card:nth-child(6) .feature-icon {
+    background: rgba(52, 199, 89, 0.1);
+    color: #34C759;
+}
+
 .feature-card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
@@ -530,7 +597,7 @@ section {
     padding: 2rem;
     box-shadow: var(--glass-shadow);
     position: relative;
-    border: 1px solid rgba(0,0,0,0.02);
+    border: 1px solid rgba(0, 0, 0, 0.02);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -583,7 +650,7 @@ section {
     border-radius: 30px;
     padding: 3rem 2.5rem;
     text-align: center;
-    border: 1px solid rgba(0,0,0,0.03);
+    border: 1px solid rgba(0, 0, 0, 0.03);
     transition: var(--transition);
 }
 
@@ -620,11 +687,11 @@ section {
 }
 
 .pricing-card.popular .price span {
-    color: rgba(255,255,255,0.8);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .pricing-card.popular p {
-    color: rgba(255,255,255,0.9);
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .pricing-features {
@@ -673,7 +740,7 @@ section {
 }
 
 .cta-box p {
-    color: rgba(255,255,255,0.9);
+    color: rgba(255, 255, 255, 0.9);
     font-size: 1.2rem;
     margin-bottom: 2.5rem;
 }
@@ -712,8 +779,8 @@ section {
     background: var(--glass-bg);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    border-top: 1px solid rgba(255,255,255,0.8);
-    box-shadow: 0 -10px 30px rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.05);
     padding: 1rem 0;
     z-index: 999;
     transform: translateY(150%);
@@ -721,9 +788,11 @@ section {
     display: flex;
     justify-content: center;
 }
+
 .sticky-cta.show {
     transform: translateY(0);
 }
+
 .sticky-inner {
     display: flex;
     align-items: center;
@@ -733,8 +802,19 @@ section {
     padding: 0 2rem;
     gap: 1.5rem;
 }
-.sticky-text h4 { margin: 0; font-size: 1.2rem; color: var(--text-dark); }
-.sticky-text p { margin: 0; font-size: 0.9rem; color: var(--primary); font-weight: 700; }
+
+.sticky-text h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--text-dark);
+}
+
+.sticky-text p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--primary);
+    font-weight: 700;
+}
 
 /* B2B Dashboard UI Elements (Reference: KidsNote) */
 .b2b-hero {
@@ -744,20 +824,22 @@ section {
     overflow: hidden;
     position: relative;
 }
+
 .dashboard-mockup {
     background: var(--white);
     border-radius: 20px 20px 0 0;
     margin: 4rem auto 0;
     max-width: 900px;
     height: 400px;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.1);
-    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
     border-bottom: none;
     position: relative;
     overflow: hidden;
     display: flex;
     flex-direction: column;
 }
+
 .dash-header {
     height: 50px;
     background: #F8F9FA;
@@ -767,10 +849,25 @@ section {
     padding: 0 1.5rem;
     gap: 0.8rem;
 }
-.dash-dot { width: 12px; height: 12px; border-radius: 50%; background: #ddd; }
-.dash-dot:nth-child(1) { background: #FF5F56; }
-.dash-dot:nth-child(2) { background: #FFBD2E; }
-.dash-dot:nth-child(3) { background: #27C93F; }
+
+.dash-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ddd;
+}
+
+.dash-dot:nth-child(1) {
+    background: #FF5F56;
+}
+
+.dash-dot:nth-child(2) {
+    background: #FFBD2E;
+}
+
+.dash-dot:nth-child(3) {
+    background: #27C93F;
+}
 
 /* Pricing Toggle Styles */
 .billing-toggle {
@@ -789,7 +886,7 @@ section {
     position: absolute;
     top: 0.4rem;
     left: 0.4rem;
-    width: calc(50% - 0.4rem);
+    width: 150px;
     height: calc(100% - 0.8rem);
     background: linear-gradient(135deg, var(--primary) 0%, #FFA07A 100%);
     border-radius: 40px;
@@ -798,10 +895,14 @@ section {
 }
 
 .billing-toggle.annual-active .toggle-bg {
-    transform: translateX(100%);
+    transform: translateX(150px);
 }
 
 .toggle-btn {
+    width: 150px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     z-index: 2;
     border: none;
@@ -820,7 +921,7 @@ section {
 .discount-badge {
     font-size: 0.8rem;
     color: var(--primary);
-    background: rgba(255,126,103,0.1);
+    background: rgba(255, 126, 103, 0.1);
     padding: 4px 8px;
     border-radius: 10px;
     margin-left: 4px;
@@ -829,7 +930,7 @@ section {
 
 .toggle-btn.active .discount-badge {
     color: var(--white);
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 /* App Previews Section */
@@ -864,8 +965,8 @@ section {
     background: var(--white);
     border-radius: 40px;
     padding: 0.8rem;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
-    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .preview-img-container img {
@@ -885,34 +986,122 @@ section {
 
 /* Responsive */
 @media (max-width: 900px) {
-    .header-inner { flex-direction: column; height: auto; padding: 1.5rem 0; gap: 1.2rem; }
-    .nav { gap: 1.2rem; flex-wrap: wrap; justify-content: center; }
-    section { padding: 5rem 0; }
-    .hero { padding-top: 180px; } /* 헤더 겹침 방지 */
-    .hero-inner { grid-template-columns: 1fr; text-align: center; }
-    .hero-content { margin: 0 auto; }
-    .hero-title { font-size: 3rem; }
-    .hero-btns { justify-content: center; }
-    .features-grid { grid-template-columns: 1fr; }
-    .step-card, .step-card:nth-child(even) { flex-direction: column; gap: 2rem; text-align: center; }
-    .pricing-grid { grid-template-columns: 1fr; }
-    .pricing-card.popular { transform: scale(1); }
-    .pricing-card.popular:hover { transform: translateY(-5px); }
-    .pricing-section { margin: 0; border-radius: 0; padding: 4rem 1.5rem; }
-    .sticky-inner { flex-direction: column; text-align: center; gap: 1rem; }
+    .header-inner {
+        flex-direction: column;
+        height: auto;
+        padding: 1.5rem 0;
+        gap: 1.2rem;
+    }
+
+    .nav {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    section {
+        padding: 5rem 0;
+    }
+
+    .hero {
+        padding-top: 180px;
+    }
+
+    /* 헤더 겹침 방지 */
+    .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-content {
+        margin: 0 auto;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-btns {
+        justify-content: center;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .step-card,
+    .step-card:nth-child(even) {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-card.popular {
+        transform: scale(1);
+    }
+
+    .pricing-card.popular:hover {
+        transform: translateY(-5px);
+    }
+
+    .pricing-section {
+        margin: 0;
+        border-radius: 0;
+        padding: 4rem 1.5rem;
+    }
+
+    .sticky-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
 }
 
 @media (max-width: 600px) {
-    .header-inner { padding: 1rem 0; }
-    .hero { padding-top: 220px; }
-    .hero-title { font-size: 2.2rem; }
-    .hero-desc { font-size: 1.1rem; }
-    .btn-lg { padding: 1em 1.5em; font-size: 1rem; width: 100%; max-width: 300px; }
-    
+    .header-inner {
+        padding: 1rem 0;
+    }
+
+    .hero {
+        padding-top: 220px;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-desc {
+        font-size: 1.1rem;
+    }
+
+    .btn-lg {
+        padding: 1em 1.5em;
+        font-size: 1rem;
+        width: 100%;
+        max-width: 300px;
+    }
+
     /* Mockup/Card UI 겹침 완전 해소 */
-    .mockup { padding: 1.5rem; transform: none !important; margin: 0 auto; width: 100%; max-width: 350px; }
-    .mockup:hover { transform: none !important; }
-    .scan-box { height: 250px; }
+    .mockup {
+        padding: 1.5rem;
+        transform: none !important;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .mockup:hover {
+        transform: none !important;
+    }
+
+    .scan-box {
+        height: 250px;
+    }
+
     .card-result {
         position: relative;
         bottom: 0;
@@ -922,11 +1111,23 @@ section {
         animation: none;
         width: 100%;
         max-width: 100%;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
     }
-    
-    .partners-grid { flex-direction: column; gap: 1.5rem !important; }
-    .section-header h2 { font-size: 2rem; }
-    .step-visual { min-height: 180px; }
-    .footer div a { font-size: 0.95rem; }
+
+    .partners-grid {
+        flex-direction: column;
+        gap: 1.5rem !important;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .step-visual {
+        min-height: 180px;
+    }
+
+    .footer div a {
+        font-size: 0.95rem;
+    }
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,19 +15,21 @@
             overflow: hidden;
             position: relative;
         }
+
         .dashboard-mockup {
             background: var(--white);
             border-radius: 20px 20px 0 0;
             margin: 4rem auto 0;
             max-width: 900px;
             height: 450px;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.1);
-            border: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.05);
             border-bottom: none;
             display: flex;
             flex-direction: column;
             transform: translateY(20px);
         }
+
         .dash-header {
             height: 50px;
             background: #F8F9FA;
@@ -36,35 +39,147 @@
             padding: 0 1.5rem;
             gap: 0.8rem;
         }
-        .dash-dot { width: 12px; height: 12px; border-radius: 50%; background: #ddd; }
-        .dash-dot:nth-child(1) { background: #FF5F56; }
-        .dash-dot:nth-child(2) { background: #FFBD2E; }
-        .dash-dot:nth-child(3) { background: #27C93F; }
-        
-        .dash-sidebar { width: 220px; background: #fff; border-right: 1px solid #eee; padding: 2rem 1.5rem; }
-        .dash-content { flex: 1; padding: 2rem; background: #fafafa; display: flex; flex-direction: column; gap: 2rem; }
-        .dash-row { display: flex; flex: 1; overflow: hidden; }
 
-        .skel-card { background: #fff; border-radius: 15px; padding: 1.5rem; border: 1px solid #f1f1f1; }
-        .skel-title { height: 16px; width: 40%; background: #eee; border-radius: 8px; margin-bottom: 1.5rem; }
-        .skel-graph { display: flex; align-items: flex-end; gap: 10px; height: 120px; }
-        .skel-bar { flex: 1; background: #e9ecef; border-radius: 5px 5px 0 0; }
-        .skel-bar:nth-child(1) { height: 40%; }
-        .skel-bar:nth-child(2) { height: 70%; background: var(--secondary); }
-        .skel-bar:nth-child(3) { height: 50%; }
-        .skel-bar:nth-child(4) { height: 90%; background: var(--primary); }
-        .skel-bar:nth-child(5) { height: 60%; }
+        .dash-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ddd;
+        }
 
-        .skel-menu { height: 14px; background: #eee; border-radius: 7px; margin-bottom: 1.2rem; }
-        .skel-menu.active { background: var(--primary); width: 80%; }
-        .skel-menu:nth-child(2) { width: 90%; }
-        .skel-menu:nth-child(3) { width: 70%; }
-        .skel-menu:nth-child(4) { width: 85%; }
+        .dash-dot:nth-child(1) {
+            background: #FF5F56;
+        }
 
-        .b2b-features { padding: 6rem 0; background: #fff; text-align: center; }
-        .b2b-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; margin-top: 4rem; }
-        .b2b-card { background: #f8f9fa; border-radius: 30px; padding: 3rem 2rem; border: 1px solid #eee; }
-        .b2b-icon { font-size: 3rem; color: var(--primary); margin-bottom: 1.5rem; }
+        .dash-dot:nth-child(2) {
+            background: #FFBD2E;
+        }
+
+        .dash-dot:nth-child(3) {
+            background: #27C93F;
+        }
+
+        .dash-sidebar {
+            width: 220px;
+            background: #fff;
+            border-right: 1px solid #eee;
+            padding: 2rem 1.5rem;
+        }
+
+        .dash-content {
+            flex: 1;
+            padding: 2rem;
+            background: #fafafa;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .dash-row {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .skel-card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 1.5rem;
+            border: 1px solid #f1f1f1;
+        }
+
+        .skel-title {
+            height: 16px;
+            width: 40%;
+            background: #eee;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        .skel-graph {
+            display: flex;
+            align-items: flex-end;
+            gap: 10px;
+            height: 120px;
+        }
+
+        .skel-bar {
+            flex: 1;
+            background: #e9ecef;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .skel-bar:nth-child(1) {
+            height: 40%;
+        }
+
+        .skel-bar:nth-child(2) {
+            height: 70%;
+            background: var(--secondary);
+        }
+
+        .skel-bar:nth-child(3) {
+            height: 50%;
+        }
+
+        .skel-bar:nth-child(4) {
+            height: 90%;
+            background: var(--primary);
+        }
+
+        .skel-bar:nth-child(5) {
+            height: 60%;
+        }
+
+        .skel-menu {
+            height: 14px;
+            background: #eee;
+            border-radius: 7px;
+            margin-bottom: 1.2rem;
+        }
+
+        .skel-menu.active {
+            background: var(--primary);
+            width: 80%;
+        }
+
+        .skel-menu:nth-child(2) {
+            width: 90%;
+        }
+
+        .skel-menu:nth-child(3) {
+            width: 70%;
+        }
+
+        .skel-menu:nth-child(4) {
+            width: 85%;
+        }
+
+        .b2b-features {
+            padding: 6rem 0;
+            background: #fff;
+            text-align: center;
+        }
+
+        .b2b-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .b2b-card {
+            background: #f8f9fa;
+            border-radius: 30px;
+            padding: 3rem 2rem;
+            border: 1px solid #eee;
+        }
+
+        .b2b-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
 
         .contact-container {
             display: flex;
@@ -73,25 +188,82 @@
             margin: 6rem auto 8rem;
             max-width: 1000px;
         }
-        .contact-info { flex: 1; }
-        .contact-form-box {
-            flex: 1.2; background: var(--white); padding: 3rem; border-radius: 30px; box-shadow: var(--glass-shadow); border: 1px solid rgba(0,0,0,0.03);
+
+        .contact-info {
+            flex: 1;
         }
-        .form-group { margin-bottom: 1.5rem; }
-        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-dark); }
-        .form-control { width: 100%; padding: 1rem; border: 2px solid #ECEFF1; border-radius: 12px; font-family: inherit; font-size: 1rem; transition: var(--transition); }
-        .form-control:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(255, 126, 103, 0.1); }
-        
-        .trust-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(52, 199, 89, 0.1); color: #2ecc71; padding: 0.5em 1em; border-radius: 50px; font-weight: 700; font-size: 0.9rem; margin-bottom: 1rem; }
+
+        .contact-form-box {
+            flex: 1.2;
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 30px;
+            box-shadow: var(--glass-shadow);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #ECEFF1;
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(255, 126, 103, 0.1);
+        }
+
+        .trust-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(52, 199, 89, 0.1);
+            color: #2ecc71;
+            padding: 0.5em 1em;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
 
         @media (max-width: 900px) {
-            .b2b-grid { grid-template-columns: 1fr; gap: 2rem; }
-            .contact-container { flex-direction: column; gap: 3rem; }
-            .dashboard-mockup { height: 300px; }
-            .dash-sidebar { display: none; }
+            .b2b-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .contact-container {
+                flex-direction: column;
+                gap: 3rem;
+            }
+
+            .dashboard-mockup {
+                height: 300px;
+            }
+
+            .dash-sidebar {
+                display: none;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <header class="header" id="header">
@@ -106,7 +278,8 @@
                 <a href="blog.html">블로그</a>
             </nav>
             <div class="header-cta">
-                <a href="#contact" class="btn btn-primary"><i class="ri-mail-send-line" style="margin-right:4px;"></i> 도입 문의</a>
+                <a href="#contact" class="btn btn-primary"><i class="ri-mail-send-line" style="margin-right:4px;"></i>
+                    도입 문의</a>
             </div>
         </div>
     </header>
@@ -114,13 +287,18 @@
     <div class="b2b-hero fade-up">
         <div class="container">
             <div class="trust-badge"><i class="ri-shield-check-fill"></i> 교육 기관 전용 맞춤 프로그램</div>
-            <h1 style="font-size: 3.2rem; margin-bottom: 1.5rem; color: #1a202c; letter-spacing: -1px;">원장님, 우리 원만의<br>특별한 AI 교육을 시작해보세요.</h1>
-            <p style="font-size: 1.25rem; color: #4a5568; max-width: 650px; margin: 0 auto; line-height: 1.6;">아이들의 상상력을 키우고, 학부모님께는 신뢰도 높은 맞춤형 교육 발달 리포트를 제공하세요. 포동이 유치원/어린이집의 브랜드 가치를 한 차원 더 높여드립니다.</p>
-            
+            <h1 style="font-size: 3.2rem; margin-bottom: 1.5rem; color: #1a202c; letter-spacing: -1px;">원장님, 우리
+                원만의<br>특별한 AI 교육을 시작해보세요.</h1>
+            <p style="font-size: 1.25rem; color: #4a5568; max-width: 650px; margin: 0 auto; line-height: 1.6;">아이들의 상상력을
+                키우고, 학부모님께는 신뢰도 높은 맞춤형 교육 발달 리포트를 제공하세요. 포동이 유치원/어린이집의 브랜드 가치를 한 차원 더 높여드립니다.</p>
+
             <div class="dashboard-mockup fade-up">
                 <div class="dash-header">
-                    <div class="dash-dot"></div><div class="dash-dot"></div><div class="dash-dot"></div>
-                    <div style="margin-left: 1rem; font-size: 0.85rem; color: #999; font-weight: 600;">포동(PHODONG) 기관용 관리자 패널</div>
+                    <div class="dash-dot"></div>
+                    <div class="dash-dot"></div>
+                    <div class="dash-dot"></div>
+                    <div style="margin-left: 1rem; font-size: 0.85rem; color: #999; font-weight: 600;">포동(PHODONG) 기관용
+                        관리자 패널</div>
                 </div>
                 <div class="dash-row">
                     <div class="dash-sidebar">
@@ -132,13 +310,18 @@
                     <div class="dash-content">
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <h3 style="margin:0; font-size:1.4rem; color:#2c3e50;">☀️ 햇살반 주간 교육 현황</h3>
-                            <button class="btn btn-primary" style="padding: 0.5em 1em; font-size: 0.85rem;">리포트 발송</button>
+                            <button class="btn btn-primary" style="padding: 0.5em 1em; font-size: 0.85rem;">리포트
+                                발송</button>
                         </div>
                         <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 1.5rem;">
                             <div class="skel-card">
                                 <div class="skel-title"></div>
                                 <div class="skel-graph">
-                                    <div class="skel-bar"></div><div class="skel-bar"></div><div class="skel-bar"></div><div class="skel-bar"></div><div class="skel-bar"></div>
+                                    <div class="skel-bar"></div>
+                                    <div class="skel-bar"></div>
+                                    <div class="skel-bar"></div>
+                                    <div class="skel-bar"></div>
+                                    <div class="skel-bar"></div>
                                 </div>
                             </div>
                             <div class="skel-card" style="display: flex; flex-direction: column; gap: 1rem;">
@@ -158,22 +341,25 @@
     <section class="b2b-features container">
         <h2 style="font-size: 2.5rem; color: var(--text-dark); margin-bottom: 1rem;">왜 포동(PHODONG) 인가요?</h2>
         <p style="font-size: 1.2rem; color: var(--text-light);">관리자는 편하게, 학부모는 안심하게, 아이들은 즐겁게.</p>
-        
+
         <div class="b2b-grid">
             <div class="b2b-card fade-up">
                 <i class="ri-dashboard-3-fill b2b-icon"></i>
-                <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">원클릭 학급 관리</h3>
-                <p style="color: var(--text-light); line-height: 1.6;">복잡한 설정 없이 원아들의 프로필을 일괄 등록하고, 교육 커리큘럼(테마/주제)을 반별로 한 번에 설정할 수 있습니다.</p>
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem; word-break: keep-all;">원클릭 학급 관리</h3>
+                <p style="color: var(--text-light); line-height: 1.6; word-break: keep-all;">복잡한 설정 없이 원아들의 프로필을 일괄
+                    등록하고, 교육 커리큘럼(테마/주제)을 반별로 한 번에 설정할 수 있습니다.</p>
             </div>
             <div class="b2b-card fade-up">
                 <i class="ri-bar-chart-grouped-fill b2b-icon" style="color: var(--accent);"></i>
-                <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">AI 다면 발달 리포트</h3>
-                <p style="color: var(--text-light); line-height: 1.6;">아이들의 앱 내 상호작용 지수 파악, 주로 쓰는 어휘 데이터 등을 분석하여 원장님 전용 대시보드로 자동 시각화 해드립니다.</p>
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem; word-break: keep-all;">AI 다면 발달 리포트</h3>
+                <p style="color: var(--text-light); line-height: 1.6; word-break: keep-all;">아이들의 앱 내 상호작용 지수 파악, 주로 쓰는
+                    어휘 데이터 등을 분석하여 원장님 전용 대시보드로 자동 시각화 해드립니다.</p>
             </div>
             <div class="b2b-card fade-up">
                 <i class="ri-parent-fill b2b-icon" style="color: var(--secondary);"></i>
-                <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">학부모 안심 연동</h3>
-                <p style="color: var(--text-light); line-height: 1.6;">매월 생성되는 아이들의 동화 포트폴리오와 발달 리포트를 알림장 형태로 학부모님께 손쉽게 전송하여 기관의 신뢰도를 높입니다.</p>
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem; word-break: keep-all;">학부모 안심 연동</h3>
+                <p style="color: var(--text-light); line-height: 1.6; word-break: keep-all;">매월 생성되는 아이들의 동화 포트폴리오와 발달
+                    리포트를 알림장 형태로 학부모님께 손쉽게 전송하여 기관의 신뢰도를 높입니다.</p>
             </div>
         </div>
     </section>
@@ -181,11 +367,14 @@
     <div class="container fade-up" id="contact" style="border-top: 1px solid #eee; padding-top: 6rem;">
         <div class="contact-container">
             <div class="contact-info">
-                <h2 class="gradient-text" style="font-size: 2.8rem; margin-bottom: 1.5rem;">마법 같은 교육 도입,<br>지금 바로 상담하세요.</h2>
-                <p style="font-size: 1.15rem; margin-bottom: 2.5rem; line-height: 1.7;">서울시내 공립·사립 유치원 및 영유아 돌봄 기관이라면 특별 프로모션 혜택을 제공합니다. 남겨주신 정보는 최고 수준의 보안으로 암호화되어 안전하게 관리됩니다.</p>
+                <h2 class="gradient-text" style="font-size: 2.8rem; margin-bottom: 1.5rem;">마법 같은 교육 도입,<br>지금 바로 상담하세요.
+                </h2>
+                <p style="font-size: 1.15rem; margin-bottom: 2.5rem; line-height: 1.7;">서울시내 공립·사립 유치원 및 영유아 돌봄 기관이라면 특별
+                    프로모션 혜택을 제공합니다. 남겨주신 정보는 최고 수준의 보안으로 암호화되어 안전하게 관리됩니다.</p>
                 <div style="margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem;">
                     <i class="ri-mail-send-fill" style="font-size: 1.8rem; color: var(--primary);"></i>
-                    <span style="font-size: 1.2rem; font-weight: 700; color:var(--text-dark);">partnership@phodong.app</span>
+                    <span
+                        style="font-size: 1.2rem; font-weight: 700; color:var(--text-dark);">partnership@phodong.app</span>
                 </div>
             </div>
 
@@ -199,22 +388,28 @@
                     <div class="form-group">
                         <label for="email">연락 받으실 이메일 주소</label>
                         <input type="email" id="email" class="form-control" placeholder="example@email.com" required>
-                        <div class="error-message" id="emailError" style="color: #e74c3c; display:none; font-size:0.85rem; margin-top:0.5rem;">올바른 이메일 형식을 입력해주세요.</div>
+                        <div class="error-message" id="emailError"
+                            style="color: #e74c3c; display:none; font-size:0.85rem; margin-top:0.5rem;">올바른 이메일 형식을
+                            입력해주세요.</div>
                     </div>
                     <div class="form-group">
                         <label for="message">문의 상세 내용</label>
-                        <textarea id="message" class="form-control" rows="4" placeholder="원아 수, 도입 희망 시기 등 궁금한 점을 편하게 적어주세요." required></textarea>
+                        <textarea id="message" class="form-control" rows="4"
+                            placeholder="원아 수, 도입 희망 시기 등 궁금한 점을 편하게 적어주세요." required></textarea>
                     </div>
-                    
-                    <button type="submit" class="btn btn-primary" id="submitBtn" style="width: 100%; padding: 1.2rem; font-size:1.1rem;">
+
+                    <button type="submit" class="btn btn-primary" id="submitBtn"
+                        style="width: 100%; padding: 1.2rem; font-size:1.1rem;">
                         <i class="ri-send-plane-fill"></i> 폼 안전하게 전송하기
                     </button>
                 </form>
 
-                <div id="successMsg" style="display: none; text-align: center; margin-top: 2rem; padding: 2rem; background:rgba(46, 204, 113, 0.1); border-radius:15px;">
+                <div id="successMsg"
+                    style="display: none; text-align: center; margin-top: 2rem; padding: 2rem; background:rgba(46, 204, 113, 0.1); border-radius:15px;">
                     <i class="ri-checkbox-circle-fill" style="font-size: 3.5rem; color:#2ecc71;"></i>
                     <h3 style="margin-top: 1rem; color: var(--text-dark); font-size:1.3rem;">성공적으로 접수되었습니다!</h3>
-                    <p style="font-size: 1rem; color:var(--text-light); margin-top:0.5rem;">B2B 전담 매니저가 내용을 검토한 뒤 영업일 기준 1~2일 내에 등록하신 이메일로 답변을 드리겠습니다.</p>
+                    <p style="font-size: 1rem; color:var(--text-light); margin-top:0.5rem;">B2B 전담 매니저가 내용을 검토한 뒤 영업일 기준
+                        1~2일 내에 등록하신 이메일로 답변을 드리겠습니다.</p>
                 </div>
             </div>
         </div>
@@ -222,11 +417,14 @@
 
     <footer class="footer">
         <div class="container">
-            <h3 style="color: var(--text-dark); margin-bottom: 1rem;"><i class="ri-magic-line" style="color: var(--primary);"></i> 포동 (PHODONG)</h3>
+            <h3 style="color: var(--text-dark); margin-bottom: 1rem;"><i class="ri-magic-line"
+                    style="color: var(--primary);"></i> 포동 (PHODONG)</h3>
             <div style="margin-bottom: 1.5rem; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
-                <a href="privacy.html" style="color: var(--text-light); text-decoration: none; font-weight: 600;">개인정보처리방침</a>
+                <a href="privacy.html"
+                    style="color: var(--text-light); text-decoration: none; font-weight: 600;">개인정보처리방침</a>
                 <a href="#" style="color: var(--text-light); text-decoration: none; font-weight: 600;">이용약관</a>
-                <a href="b2b.html" style="color: var(--primary); text-decoration: none; font-weight: 700;">고객센터 및 제휴 문의</a>
+                <a href="b2b.html" style="color: var(--primary); text-decoration: none; font-weight: 700;">고객센터 및 제휴
+                    문의</a>
             </div>
             <p>Copyright © 2026 Phodong Inc. All rights reserved.</p>
         </div>
@@ -236,7 +434,7 @@
     <script>
         function submitForm(e) {
             e.preventDefault();
-            
+
             const email = document.getElementById('email').value.trim();
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
@@ -244,7 +442,7 @@
                 document.getElementById('emailError').style.display = 'block';
                 return false;
             }
-            
+
             const btn = document.getElementById('submitBtn');
             btn.innerHTML = '<i class="ri-loader-4-line ri-spin"></i> 안전하게 암호화하여 전송 중...';
             btn.disabled = true;
@@ -259,4 +457,5 @@
         }
     </script>
 </body>
+
 </html>
