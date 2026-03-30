@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포동 체험해보기 - PHODONG</title>
+    <meta name="description" content="다운로드 없이 포동을 바로 체험해보세요. 사물 스캔부터 동화 생성까지 전 과정을 웹에서 미리 경험할 수 있습니다.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        .demo-hero { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); padding: 140px 0 60px; text-align: center; }
+        .object-btn { width: 100px; height: 100px; border-radius: 25px; border: 3px solid transparent; cursor: pointer; transition: all 0.3s; font-size: 2.5rem; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.05); }
+        .object-btn:hover, .object-btn.selected { border-color: var(--primary); background: rgba(255,126,103,0.15); transform: scale(1.1); }
+        .phone-demo { background: #1a1a2e; border-radius: 40px; padding: 1.5rem; width: 300px; box-shadow: 0 40px 80px rgba(0,0,0,0.4); }
+        .phone-screen { background: var(--bg-color); border-radius: 25px; padding: 2rem; min-height: 500px; display: flex; flex-direction: column; gap: 1rem; overflow: hidden; }
+        .gen-step { display: none; }
+        .gen-step.active { display: flex; flex-direction: column; gap: 1rem; }
+        .scan-anim { width: 100%; height: 200px; background: #000; border-radius: 15px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; font-size: 4rem; }
+        .scan-line-demo { position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, transparent, var(--primary), transparent); animation: scanMove 2s linear infinite; }
+        @keyframes scanMove { 0% { top: 0; } 100% { top: 100%; } }
+    </style>
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo"><i class="ri-magic-line"></i><span>포동(PHODONG)</span></a>
+            <nav class="nav">
+                <a href="features.html">상세 기능</a>
+                <a href="about.html">팀 소개</a>
+                <a href="faq.html">FAQ</a>
+                <a href="b2b.html">기관 도입</a>
+                <a href="demo.html" style="color: var(--primary);">체험해보기</a>
+            </nav>
+            <div class="header-cta"><a href="#" class="btn btn-primary"><i class="ri-apple-fill"></i> 앱 다운로드</a></div>
+        </div>
+    </header>
+
+    <div class="demo-hero">
+        <div class="container">
+            <div class="badge" style="background: rgba(255,126,103,0.2); color: #FF7E67; border: 1px solid rgba(255,126,103,0.3);">🎮 다운로드 없이 바로 체험</div>
+            <h1 style="font-size: 3rem; color: white; margin: 1.5rem 0; letter-spacing: -1px;">포동이 어떻게 작동하는지<br>직접 눌러보세요!</h1>
+            <p style="font-size: 1.2rem; color: rgba(255,255,255,0.7); max-width: 530px; margin: 0 auto;">앱 설치 없이도 포동의 전체 경험 흐름을 웹에서 미리 체험할 수 있습니다.</p>
+        </div>
+    </div>
+
+    <!-- Interactive Demo -->
+    <section class="container" style="padding: 6rem 0;">
+        <div style="display: grid; grid-template-columns: 1fr 300px; gap: 5rem; align-items: start; max-width: 900px; margin: 0 auto;">
+            <!-- Controls -->
+            <div>
+                <!-- Step 1 -->
+                <div id="ctrl-step1" style="margin-bottom: 3rem;">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                        <div style="width: 40px; height: 40px; background: var(--gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 900;">1</div>
+                        <h3 style="font-size: 1.4rem; color: var(--text-dark);">오늘의 이야기 주제를 골라요</h3>
+                    </div>
+                    <div style="display: flex; gap: 0.8rem; flex-wrap: wrap; margin-bottom: 1rem;">
+                        <button onclick="selectGenre(this, '전래동화')" class="object-btn" style="width: auto; height: auto; padding: 0.6em 1.2em; font-size: 0.95rem; border-radius: 12px;">🐯 전래동화</button>
+                        <button onclick="selectGenre(this, '판타지')" class="object-btn" style="width: auto; height: auto; padding: 0.6em 1.2em; font-size: 0.95rem; border-radius: 12px;">✨ 판타지</button>
+                        <button onclick="selectGenre(this, '히어로')" class="object-btn" style="width: auto; height: auto; padding: 0.6em 1.2em; font-size: 0.95rem; border-radius: 12px;">🦸 히어로</button>
+                        <button onclick="selectGenre(this, '마법')" class="object-btn" style="width: auto; height: auto; padding: 0.6em 1.2em; font-size: 0.95rem; border-radius: 12px;">🪄 마법</button>
+                        <button onclick="selectGenre(this, '일상')" class="object-btn" style="width: auto; height: auto; padding: 0.6em 1.2em; font-size: 0.95rem; border-radius: 12px;">🏡 일상</button>
+                        <button onclick="selectGenre(this, '자동차')" class="object-btn" style="width: auto; height: auto; padding: 0.6em 1.2em; font-size: 0.95rem; border-radius: 12px;">🚓 자동차</button>
+                        <button onclick="selectGenre(this, '공주/왕자')" class="object-btn" style="width: auto; height: auto; padding: 0.6em 1.2em; font-size: 0.95rem; border-radius: 12px;">👑 공주/왕자</button>
+                        <button onclick="selectGenre(this, '추리')" class="object-btn" style="width: auto; height: auto; padding: 0.6em 1.2em; font-size: 0.95rem; border-radius: 12px;">🕵️ 추리</button>
+                        <button onclick="selectGenre(this, '우주')" class="object-btn" style="width: auto; height: auto; padding: 0.6em 1.2em; font-size: 0.95rem; border-radius: 12px;">🚀 우주</button>
+                        <button onclick="selectGenre(this, '로봇')" class="object-btn" style="width: auto; height: auto; padding: 0.6em 1.2em; font-size: 0.95rem; border-radius: 12px;">🤖 로봇</button>
+                        <button onclick="selectGenre(this, '동물')" class="object-btn" style="width: auto; height: auto; padding: 0.6em 1.2em; font-size: 0.95rem; border-radius: 12px;">🐶 동물</button>
+                        <button onclick="selectGenre(this, '공룡')" class="object-btn" style="width: auto; height: auto; padding: 0.6em 1.2em; font-size: 0.95rem; border-radius: 12px;">🦕 공룡</button>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div id="ctrl-step2" style="margin-bottom: 3rem; opacity: 0.4; pointer-events: none; transition: all 0.5s;">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                        <div style="width: 40px; height: 40px; background: var(--gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 900;">2</div>
+                        <h3 style="font-size: 1.4rem; color: var(--text-dark);">스캔할 사물을 골라요</h3>
+                    </div>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <button onclick="selectObject(this, '🛋️', '소파', '지혜로운 안내자')" class="object-btn">🛋️</button>
+                        <button onclick="selectObject(this, '🧸', '곰인형', '용감한 친구')" class="object-btn">🧸</button>
+                        <button onclick="selectObject(this, '📚', '책', '마법사')" class="object-btn">📚</button>
+                        <button onclick="selectObject(this, '🌵', '선인장', '수호자')" class="object-btn">🌵</button>
+                        <button onclick="selectObject(this, '🎈', '풍선', '하늘 탐험가')" class="object-btn">🎈</button>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div id="ctrl-step3" style="opacity: 0.4; pointer-events: none; transition: all 0.5s;">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                        <div style="width: 40px; height: 40px; background: var(--gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 900;">3</div>
+                        <h3 style="font-size: 1.4rem; color: var(--text-dark);">포동이 동화를 써줘요!</h3>
+                    </div>
+                    <button id="generateBtn" onclick="generateStory()" class="btn btn-primary" style="padding: 1.2em 3em; font-size: 1.1rem; width: 100%;">
+                        <i class="ri-sparkling-fill"></i> 지금 바로 동화 만들기
+                    </button>
+                </div>
+            </div>
+
+            <!-- Phone Screen -->
+            <div style="position: sticky; top: 120px;">
+                <div class="phone-demo">
+                    <div class="phone-screen">
+                        <!-- Step 0: Waiting -->
+                        <div class="gen-step active" id="screen-0" style="align-items: center; justify-content: center; flex: 1;">
+                            <div style="font-size: 4rem; margin-bottom: 1rem;">🌟</div>
+                            <p style="text-align: center; color: var(--text-light); font-size: 0.9rem; line-height: 1.6;">왼쪽에서 장르와 사물을 선택하면<br>동화가 만들어져요!</p>
+                        </div>
+                        <!-- Step 1: Scanning -->
+                        <div class="gen-step" id="screen-1">
+                            <div style="font-size: 0.9rem; font-weight: 700; color: var(--text-dark);">📷 <span id="screen-object-emoji"></span> 스캔 중...</div>
+                            <div class="scan-anim">
+                                <div class="scan-line-demo"></div>
+                                <span id="screen-object-show" style="font-size: 4rem;"></span>
+                            </div>
+                            <div style="background: rgba(255,126,103,0.1); border-radius: 12px; padding: 1rem; text-align: center;">
+                                <div style="font-weight: 700; color: var(--primary); font-size: 0.9rem;" id="character-name-display">캐릭터 생성 중...</div>
+                                <div style="font-size: 0.8rem; color: var(--text-light); margin-top: 0.3rem;" id="character-line-display"></div>
+                            </div>
+                        </div>
+                        <!-- Step 2: Story -->
+                        <div class="gen-step" id="screen-2">
+                            <div style="font-size: 0.9rem; font-weight: 800; color: var(--text-dark);">📖 <span id="story-title"></span></div>
+                            <div style="background: white; border-radius: 12px; padding: 1rem; font-size: 0.85rem; color: var(--text-dark); line-height: 1.7; flex: 1;" id="story-text"></div>
+                            <div style="display: flex; align-items: center; gap: 0.8rem;">
+                                <div style="width: 38px; height: 38px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; cursor: pointer;">
+                                    <i class="ri-play-fill" style="color: white;"></i>
+                                </div>
+                                <div style="flex: 1; height: 4px; background: #eee; border-radius: 2px;"><div style="width: 30%; height: 100%; background: var(--primary); border-radius: 2px;"></div></div>
+                            </div>
+                            <a href="#" class="btn btn-primary" style="text-align: center; font-size: 0.9rem; padding: 0.8em;"><i class="ri-apple-fill"></i> 풀 버전 앱으로 계속 읽기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: #f8f9fa; padding: 5rem 0; text-align: center;">
+        <div class="container fade-up">
+            <h2 style="font-size: 2rem; margin-bottom: 1rem;">마음에 드셨나요?</h2>
+            <p style="color: var(--text-light); margin-bottom: 2rem;">앱에서는 더 많은 사물을 스캔하고, 완성된 동화를 TTS로 들을 수 있어요.</p>
+            <a href="#" class="btn btn-primary btn-lg"><i class="ri-apple-fill" style="margin-right: 6px;"></i> App Store 무료 다운로드</a>
+        </div>
+    </section>
+
+    <footer class="footer"><div class="container"><h3 style="color: var(--text-dark); margin-bottom: 1rem;"><i class="ri-magic-line" style="color: var(--primary);"></i> 포동 (PHODONG)</h3><div style="margin-bottom: 1.5rem; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;"><a href="privacy.html" style="color: var(--primary); text-decoration: none; font-weight: 700;">개인정보처리방침</a><a href="safety.html" style="color: var(--text-light); text-decoration: none; font-weight: 600;">아동 안전 가이드</a><a href="b2b.html" style="color: var(--text-light); text-decoration: none; font-weight: 600;">제휴 문의</a></div><p>Copyright © 2026 Phodong Inc. All rights reserved.</p></div></footer>
+    <script src="app.js"></script>
+    <script>
+        let selectedGenre = '';
+        let selectedObj = {};
+
+        function showScreen(id) {
+            ['screen-0','screen-1','screen-2'].forEach(s => {
+                document.getElementById(s).classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+        }
+
+        function selectGenre(btn, genre) {
+            document.querySelectorAll('#ctrl-step1 .object-btn').forEach(b => b.classList.remove('selected'));
+            btn.classList.add('selected');
+            selectedGenre = genre;
+            document.getElementById('ctrl-step2').style.opacity = '1';
+            document.getElementById('ctrl-step2').style.pointerEvents = 'auto';
+        }
+
+        function selectObject(btn, emoji, name, role) {
+            document.querySelectorAll('#ctrl-step2 .object-btn').forEach(b => b.classList.remove('selected'));
+            btn.classList.add('selected');
+            selectedObj = { emoji, name, role };
+            document.getElementById('ctrl-step3').style.opacity = '1';
+            document.getElementById('ctrl-step3').style.pointerEvents = 'auto';
+            document.getElementById('screen-object-emoji').textContent = emoji;
+            document.getElementById('screen-object-show').textContent = emoji;
+            document.getElementById('character-name-display').textContent = `${name} → ${role}`;
+            document.getElementById('character-line-display').textContent = '"나와 함께라면 두려울 것이 없어!"';
+            showScreen('screen-1');
+        }
+
+        function generateStory() {
+            if (!selectedGenre || !selectedObj.name) return;
+            const btn = document.getElementById('generateBtn');
+            btn.innerHTML = '<i class="ri-loader-4-line"></i> 동화 생성 중...';
+            btn.disabled = true;
+
+            const stories = {
+                '전래동화': `엣날 옛적, 깊은 산골 호랑이보다 무서운 곶감을 찾아 떠난 ${selectedObj.name} 요정의 엉뚱한 모험이 시작되었어요!`,
+                '판타지': `구름 위 마법의 성에서 길을 잃은 별빛 요정들을 구하기 위해 ${selectedObj.name}이(가) 나섰어요!`,
+                '히어로': `도시의 평화를 위협하는 악당 '먼지괴물'에 맞서 슈퍼파워를 발휘하는 우리의 영웅 ${selectedObj.name}!`,
+                '마법': `지팡이를 휘두르자 펑! 하는 소리와 함께 ${selectedObj.name}의 멋진 마법이 온 세상을 춤추게 만들었어요.`,
+                '일상': `오늘은 ${selectedObj.name}과(와) 함께 동네 놀이터에서 가장 재미있는 모래성 짓기 대회를 여는 날이에요.`,
+                '자동차': `부릉부릉! 세상에서 제일 빠른 ${selectedObj.name} 레이서 우주 1등이 되기 위한 스릴만점 레이스가 펼쳐져요.`,
+                '공주/왕자': `유리 구두를 잃어버린 성 안의 무도회, ${selectedObj.name}이(가) 숨겨진 비밀을 찾아 나서는 왕실 모험기!`,
+                '추리': `사라진 황금 도토리를 찾기 위해 돋보기를 든 명탐정 ${selectedObj.name}의 날카로운 추리가 돋보입니다.`,
+                '우주': `우주 탐험사 ${selectedObj.role}인 ${selectedObj.name}이 외쳤어요. "저기 저 별이 새로운 행성이야!" 빛의 속도로 날아가는 우주여행!`,
+                '로봇': `삐리비리. 에너지가 부족한 고물 행성을 다시 번쩍이게 살려내는 멋진 엔지니어 로봇 ${selectedObj.name}의 이야기.`,
+                '동물': `깊은 숲 속 동물 친구들의 장기자랑 대회! 가장 큰 박수를 받은 건 춤추는 ${selectedObj.name}이었어요.`,
+                '공룡': `어느 날 저녁, 거대한 티라노사우루스를 만나기 위해 시간 여행을 떠난 ${selectedObj.name}의 아슬아슬 공룡 시대 탐험기!`
+            };
+
+            setTimeout(() => {
+                document.getElementById('story-title').textContent = `${selectedGenre} 속 ${selectedObj.name} 이야기`;
+                document.getElementById('story-text').textContent = stories[selectedGenre] || `${selectedObj.name}과 함께하는 특별한 모험이 시작되었어요!`;
+                showScreen('screen-2');
+                btn.innerHTML = '<i class="ri-sparkling-fill"></i> 지금 바로 동화 만들기';
+                btn.disabled = false;
+            }, 1800);
+        }
+    </script>
+</body>
+</html>

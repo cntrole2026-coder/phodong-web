@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHODONG - 우리 아이 맞춤 동화 생성 AI</title>
+    <meta name="description" content="AI가 일상의 사물을 캐릭터로 변환하여 아이만을 위한 커스텀 인터랙티브 동화를 실시간으로 만들어줍니다.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Background Shapes -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <i class="ri-magic-line"></i>
+                <span>포동(PHODONG)</span>
+            </a>
+            <nav class="nav">
+                <a href="demo.html" style="color: var(--primary); font-weight: 800;">🎮 체험해보기</a>
+                <a href="features.html">상세 기능</a>
+                <a href="about.html">팀 소개</a>
+                <a href="faq.html">FAQ</a>
+                <a href="b2b.html">기관 도입</a>
+                <a href="blog.html">블로그</a>
+            </nav>
+            <div class="header-cta">
+                <a href="#cta" class="btn btn-primary"><i class="ri-apple-fill" style="margin-right:4px;"></i> App Store</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-inner">
+            <div class="hero-content fade-up visible">
+                <div class="badge">📖 오늘 밤 동화 고민, 이제 마지막으로</div>
+                <h1 class="hero-title">우리 아이만의<br><span class="gradient-text">특별한 동화가 생겨요.</span></h1>
+                <p class="hero-desc">집 안 물건에 카메라를 비추기만 하세요. 그 물건이 동화 속 주인공이 되어, 우리 아이 이름과 취향이 담긴 세상에 하나뿐인 이야기를 만들어드려요.</p>
+                <div class="hero-btns">
+                    <a href="#cta" class="btn btn-primary btn-lg"><i class="ri-apple-fill" style="margin-right:6px; font-size:1.2rem;"></i> App Store에서 다운로드</a>
+                    <a href="#how-it-works" class="btn btn-secondary btn-lg">어떻게 쓰나요?</a>
+                </div>
+            </div>
+            <div class="hero-visual fade-up visible">
+                <div class="mockup">
+                    <div class="mockup-header">
+                        <i class="ri-camera-lens-fill"></i> 소파를 인식하는 중...
+                    </div>
+                    <div class="scan-box">
+                        <div class="scan-line"></div>
+                        <i class="ri-bear-smile-fill mockup-icon"></i>
+                    </div>
+                    <div class="card-result">
+                        <h4><i class="ri-star-smile-fill"></i> 호기심 많은 곰돌이</h4>
+                        <p>"안녕! 소파 뒤에 숨어있던 나 생각 했니? 오늘 모험 매니저가 되어줘!"</p>
+                    </div>
+                </div>
+                <div class="floating-bubble bubble-1"><i class="ri-book-read-fill"></i></div>
+                <div class="floating-bubble bubble-2"><i class="ri-sparkling-fill"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted Partners Banner -->
+    <div class="partners-section fade-up" style="text-align: center; padding: 3rem 0; margin-bottom: 2rem; border-bottom: 1px solid rgba(0,0,0,0.04);">
+        <p style="font-size: 0.85rem; font-weight: 700; color: var(--text-light); margin-bottom: 1.5rem; letter-spacing: 2px;">우리아이 건강한 미디어 습관, 함께 만드는 파트너</p>
+        <div class="partners-grid" style="display: flex; justify-content: center; align-items: center; gap: 4rem; flex-wrap: wrap; opacity: 0.5; filter: grayscale(100%);">
+            <div style="font-size: 1.5rem; font-weight: 800; color: var(--text-dark);"><i class="ri-apple-fill" style="vertical-align: middle;"></i> App Store</div>
+            <div style="font-size: 1.5rem; font-weight: 800; color: var(--text-dark); display: flex; align-items: center; gap: 0.5rem;"><i class="ri-book-read-fill"></i> 서울특별시교육청</div>
+            <div style="font-size: 1.5rem; font-weight: 800; color: var(--text-dark); display: flex; align-items: center; gap: 0.5rem;"><i class="ri-graduation-cap-fill"></i> EDU-TECH LAB</div>
+            <div style="font-size: 1.5rem; font-weight: 800; color: var(--text-dark); display: flex; align-items: center; gap: 0.5rem;"><i class="ri-parent-line"></i> 대한아동발달센터</div>
+        </div>
+    </div>
+
+    <!-- Features -->
+    <section class="container" id="features">
+        <div class="section-header fade-up">
+            <h2 class="gradient-text">유튜브 대신, 아이가 스스로 이야기 속으로 들어가요</h2>
+            <p>포동은 시청이 아닌 ‘보고, 생각하고, 동화를 함께 만들어 가는’ 시간이에요.</p>
+        </div>
+        <div class="features-grid" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="feature-card fade-up">
+                <div class="feature-icon"><i class="ri-camera-3-line"></i></div>
+                <h3>사물 4개가 동화 친구 4명으로</h3>
+                <p>카메라를 집 안 물건에 비추면 AI가 그 물건만의 이름·성격·마법능력을 즉석에서 만들어줘요. 4개를 모으면 그 친구들이 모두 나오는 한 편의 완성된 동화가 뚝딱!</p>
+            </div>
+            <div class="feature-card fade-up">
+                <div class="feature-icon"><i class="ri-sparkling-2-line"></i></div>
+                <h3>장르 12가지, 오늘은 어떤 세계?</h3>
+                <p>전래동화·판타지·히어로·마법·일상·자동차·공주왕자·추리·우주·로봇·동물·공룡 — 매일 밤 다른 세계로 떠날 수 있어요.</p>
+            </div>
+            <div class="feature-card fade-up">
+                <div class="feature-icon"><i class="ri-brain-line"></i></div>
+                <h3>나이에 딱 맞는 문장, 자동으로</h3>
+                <p>3살용 의성어 가득 짧은 문장부터 12살용 내적 성장·도덕적 딜레마까지 — 나이별 6단계 언어 조율이 자동으로 이뤄져요.</p>
+            </div>
+            <div class="feature-card fade-up">
+                <div class="feature-icon"><i class="ri-heart-line"></i></div>
+                <h3>교육 목적 8가지, 오늘의 교훈은?</h3>
+                <p>안전·예절규칙·문화·어휘력·세계다양성·사고력·기초과학·자신감 — 동화 마지막 페이지에서 아이가 가슴 뭉클하게 교훈을 깨달아요.</p>
+            </div>
+            <div class="feature-card fade-up">
+                <div class="feature-icon"><i class="ri-book-2-line"></i></div>
+                <h3>내 책장 — 동화가 차곡차곡 쌓여요</h3>
+                <p>완성된 동화는 자동 저장돼요. 자기 전에 어제 만든 동화를 다시 펼치는 루틴 — 우리 아이만의 서재가 생겨요.</p>
+            </div>
+            <div class="feature-card fade-up">
+                <div class="feature-icon"><i class="ri-sparkling-fill"></i></div>
+                <h3>친구 도감 — 만난 캐릭터를 모아요</h3>
+                <p>스캔마다 탄생하는 사물 친구들이 도감에 쌓여요. "저 친구 또 나왔어!" 하며 설레는 재방문 경험을 만들어드려요.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="container" id="how-it-works">
+        <div class="section-header fade-up">
+            <h2>시작하기가 얼마나 쉬운지 보시면 놓지 못해요</h2>
+            <p>스마트폰 하나면 충분해요. 준비할 것 없습니다.</p>
+        </div>
+        <div class="steps-container">
+            <div class="step-card fade-up">
+                <div class="step-visual"><i class="ri-settings-4-fill"></i></div>
+                <div class="step-content">
+                    <div class="step-number">1</div>
+                    <h3 class="secondary-gradient">아이 취향대로 직접 고르기</h3>
+                    <p>아이 이름과 나이, 원하는 모험 세계(공룡, 우주, 요정숲 등), 오늘 이야기에 담고 싶은 마음(용기, 나누기, 호기심 등)을 고르세요. 1분이면 돼요.</p>
+                </div>
+            </div>
+            <div class="step-card fade-up">
+                <div class="step-visual"><i class="ri-camera-fill"></i></div>
+                <div class="step-content">
+                    <div class="step-number">2</div>
+                    <h3 class="secondary-gradient">집 안 구석구석을 탐험해요</h3>
+                    <p>아이가 스마트폰을 들고 방 안을 돌아다니면서 카메라를 비추면 그 물건이 동화 속 주인공으로 태어나요. 눈이 반짝반짝해지는 탐험이 시작됩니다!</p>
+                </div>
+            </div>
+            <div class="step-card fade-up">
+                <div class="step-visual"><i class="ri-book-open-fill"></i></div>
+                <div class="step-content">
+                    <div class="step-number">3</div>
+                    <h3 class="secondary-gradient">함께 듣고, 함께 이야기해요</h3>
+                    <p>모은 주인공들이 힘을 합쳐 결말을 맺는 동화가 완성돼요. 따뜻한 목소리 낭독과 함께 부모님과 대화할 수 있는 질문들도 중간에 등장해요. 이 시간이 하루 중 가장 소중한 시간이 될 거예요.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+            <div class="section-header fade-up">
+                <h2>서비스 요금제</h2>
+                <p>포동과 함께 아이의 상상력을 무한대로 키워보세요.</p>
+            </div>
+            <div class="pricing-grid">
+                <!-- Basic -->
+                <div class="pricing-card fade-up">
+                    <div class="pricing-header">
+                        <h3>체험하기</h3>
+                        <div class="price">무료</div>
+                        <p>부담 없이 서비스 확인하기</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="ri-check-line"></i> 월 3회 동화 생성 체험</li>
+                        <li><i class="ri-check-line"></i> 3가지 기본 장르 이용</li>
+                        <li><i class="ri-check-line"></i> 실시간 사물 캐릭터 변환</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary" style="width: 100%;">시작하기</a>
+                </div>
+                <!-- Popular -->
+                <div class="pricing-card popular fade-up">
+                    <div class="badge" style="background: rgba(255,255,255,0.2); color: white; border: none;">베스트 초이스</div>
+                    <div class="pricing-header">
+                        <h3>베이직 구독</h3>
+                        <div class="price">₩4,900<span>/월</span></div>
+                        <p>매일 밤 다른 동화, 무제한으로</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="ri-check-fill"></i> <strong>무제한</strong> 동화 생성 가능</li>
+                        <li><i class="ri-check-fill"></i> 12가지 장르, 8가지 교육 목적</li>
+                        <li><i class="ri-check-fill"></i> TTS 음성 낭독 + 사물 도감 저장</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary" style="width: 100%; color: var(--text-dark);">구독하기</a>
+                </div>
+                <!-- Premium B2B -->
+                <div class="pricing-card fade-up">
+                    <div class="pricing-header">
+                        <h3>기관 도입 (B2B)</h3>
+                        <div class="price">별도문의</div>
+                        <p>유치원·어린이집·도서관을 위한</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="ri-check-line"></i> 원클릭 학급 관리 패널</li>
+                        <li><i class="ri-check-line"></i> 아이별 교육 활동 리포트</li>
+                        <li><i class="ri-check-line"></i> 프리미엄 동화 서재/출력</li>
+                    </ul>
+                    <a href="b2b.html" class="btn btn-secondary" style="width: 100%;">기관 도입 문의 폼 제출</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Numbers Section -->
+    <section class="container" id="impact" style="padding: 5rem 0;">
+        <div class="section-header fade-up" style="margin-bottom: 3rem;">
+            <div class="badge">📊 포동의 힘</div>
+            <h2>숫자로 보는 포동</h2>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center;" class="fade-up">
+            <div style="padding: 2.5rem 1.5rem; background: var(--white); border-radius: 25px; box-shadow: var(--glass-shadow);">
+                <div class="gradient-text" style="font-size: 3.5rem; font-weight: 900; line-height: 1;">3~12</div>
+                <div style="font-weight: 700; color: var(--text-dark); margin-top: 0.5rem;">세 맞춤 최적화</div>
+                <div style="font-size: 0.9rem; color: var(--text-light); margin-top: 0.3rem;">발달 단계별 언어 조율</div>
+            </div>
+            <div style="padding: 2.5rem 1.5rem; background: var(--white); border-radius: 25px; box-shadow: var(--glass-shadow);">
+                <div class="gradient-text" style="font-size: 3.5rem; font-weight: 900; line-height: 1;">12</div>
+                <div style="font-weight: 700; color: var(--text-dark); margin-top: 0.5rem;">가지 모험 장르</div>
+                <div style="font-size: 0.9rem; color: var(--text-light); margin-top: 0.3rem;">공룡부터 우주, 요정숲까지</div>
+            </div>
+            <div style="padding: 2.5rem 1.5rem; background: var(--white); border-radius: 25px; box-shadow: var(--glass-shadow);">
+                <div class="gradient-text" style="font-size: 3.5rem; font-weight: 900; line-height: 1;">8</div>
+                <div style="font-weight: 700; color: var(--text-dark); margin-top: 0.5rem;">가지 교육 목표</div>
+                <div style="font-size: 0.9rem; color: var(--text-light); margin-top: 0.3rem;">용기, 배려, 창의력 등</div>
+            </div>
+            <div style="padding: 2.5rem 1.5rem; background: var(--white); border-radius: 25px; box-shadow: var(--glass-shadow);">
+                <div class="gradient-text" style="font-size: 3.5rem; font-weight: 900; line-height: 1;">∞</div>
+                <div style="font-weight: 700; color: var(--text-dark); margin-top: 0.5rem;">가지 이야기 조합</div>
+                <div style="font-size: 0.9rem; color: var(--text-light); margin-top: 0.3rem;">매일 밤 새로운 세계</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Screenshots Carousel -->
+    <section style="background: linear-gradient(135deg, #F0F9FF 0%, #EEF2FF 100%); padding: 6rem 0; overflow: hidden;" id="preview">
+        <div class="container">
+            <div class="section-header fade-up">
+                <div class="badge">📱 앱 미리보기</div>
+                <h2>이렇게 생겼어요</h2>
+                <p>아이와 함께 사용할 화면을 미리 살펴보세요.</p>
+            </div>
+            <div style="display: flex; gap: 2rem; justify-content: center; margin-top: 3rem; flex-wrap: wrap;" class="fade-up">
+                <!-- Screen 1 -->
+                <div style="width: 220px; background: #1a1a2e; border-radius: 35px; padding: 1.5rem 1rem; box-shadow: 0 30px 60px rgba(0,0,0,0.2); flex-shrink: 0;">
+                    <div style="background: var(--bg-color); border-radius: 20px; padding: 1.5rem; text-align: center; min-height: 360px; display: flex; flex-direction: column; justify-content: center; gap: 1rem;">
+                        <i class="ri-settings-4-fill" style="font-size: 2.5rem; color: var(--primary);"></i>
+                        <h4 style="font-size: 1rem; color: var(--text-dark);">오늘의 이야기 설정</h4>
+                        <div style="background: rgba(255,126,103,0.1); border-radius: 12px; padding: 0.8rem; font-size: 0.8rem; color: var(--primary); font-weight: 700;">🦕 공룡 세계</div>
+                        <div style="background: rgba(135,206,235,0.1); border-radius: 12px; padding: 0.8rem; font-size: 0.8rem; color: var(--secondary); font-weight: 700;">💪 용기 기르기</div>
+                        <div style="background: #f8f9fa; border-radius: 12px; padding: 0.8rem; font-size: 0.8rem; color: var(--text-light);">나이: 6세 · 이름: 지우</div>
+                    </div>
+                    <div style="text-align: center; margin-top: 0.8rem; font-size: 0.8rem; color: rgba(255,255,255,0.5);">① 설정하기</div>
+                </div>
+                <!-- Screen 2 -->
+                <div style="width: 220px; background: #1a1a2e; border-radius: 35px; padding: 1.5rem 1rem; box-shadow: 0 30px 60px rgba(0,0,0,0.2); flex-shrink: 0; transform: translateY(-20px);">
+                    <div style="background: #000; border-radius: 20px; padding: 1rem; text-align: center; min-height: 360px; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end;">
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 5rem;">🧸</div>
+                        <div style="position: absolute; top: 1rem; left: 1rem; background: rgba(255,126,103,0.9); color: white; border-radius: 8px; padding: 0.3rem 0.8rem; font-size: 0.75rem; font-weight: 700;">● 인식 중...</div>
+                        <div style="background: rgba(255,255,255,0.95); border-radius: 15px; padding: 1rem; font-size: 0.85rem;">
+                            <strong style="color: var(--primary);">인형 → 용감한 곰순이</strong><br>
+                            <span style="color: var(--text-light); font-size: 0.75rem;">"두려워할 필요 없어, 내가 함께야!"</span>
+                        </div>
+                    </div>
+                    <div style="text-align: center; margin-top: 0.8rem; font-size: 0.8rem; color: rgba(255,255,255,0.5);">② 사물 스캔</div>
+                </div>
+                <!-- Screen 3 -->
+                <div style="width: 220px; background: #1a1a2e; border-radius: 35px; padding: 1.5rem 1rem; box-shadow: 0 30px 60px rgba(0,0,0,0.2); flex-shrink: 0;">
+                    <div style="background: var(--bg-color); border-radius: 20px; padding: 1.5rem 1rem; min-height: 360px; display: flex; flex-direction: column; gap: 0.8rem;">
+                        <div style="font-size: 1rem; font-weight: 800; color: var(--text-dark);">📖 지우의 특별한 모험</div>
+                        <div style="background: white; border-radius: 12px; padding: 1rem; font-size: 0.8rem; color: var(--text-dark); line-height: 1.6; flex: 1;">어느 날 저녁, 용감한 곰순이가 지우에게 말했어요. "오늘 밤 우리 함께 공룡 동굴을 찾으러 가자!"</div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <div style="width: 35px; height: 35px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i class="ri-volume-up-fill" style="color: white; font-size: 1rem;"></i>
+                            </div>
+                            <div style="flex: 1; height: 4px; background: #eee; border-radius: 2px;">
+                                <div style="width: 40%; height: 100%; background: var(--primary); border-radius: 2px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="text-align: center; margin-top: 0.8rem; font-size: 0.8rem; color: rgba(255,255,255,0.5);">③ 동화 읽기</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="container" id="reviews" style="padding: 6rem 0;">
+        <div class="section-header fade-up">
+            <div class="badge">💬 부모님 후기</div>
+            <h2>직접 써본 부모님들의 이야기</h2>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem;" class="fade-up">
+            <div style="background: var(--white); border-radius: 25px; padding: 2.5rem; box-shadow: var(--glass-shadow); border: 1px solid rgba(0,0,0,0.02);">
+                <div style="color: #FFD700; font-size: 1.1rem; margin-bottom: 1rem;">★★★★★</div>
+                <p style="color: var(--text-dark); line-height: 1.8; margin-bottom: 1.5rem; font-size: 1rem;">"매일 유튜브만 보던 아이가 스스로 집 안 물건에 카메라를 들이대며 '이것도 주인공이야!'라고 하더라고요. 부모인 저도 같이 스토리를 만드는 게 즐거웠어요."</p>
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <div style="width: 45px; height: 45px; background: rgba(255,126,103,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">👩</div>
+                    <div>
+                        <div style="font-weight: 700; color: var(--text-dark);">김O연 님</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">6세 딸 부모님 · 서울</div>
+                    </div>
+                </div>
+            </div>
+            <div style="background: linear-gradient(135deg, var(--primary), #FF9F7F); border-radius: 25px; padding: 2.5rem; box-shadow: 0 20px 40px rgba(255,126,103,0.25);">
+                <div style="color: #FFD700; font-size: 1.1rem; margin-bottom: 1rem;">★★★★★</div>
+                <p style="color: white; line-height: 1.8; margin-bottom: 1.5rem; font-size: 1rem;">"자기 전에 스마트폰 주려다 죄책감 들었는데, 포동은 달라요. 아이가 직접 참여하고, 저도 옆에서 대화하게 되니까요. 교육적이면서도 재밌어요."</p>
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <div style="width: 45px; height: 45px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">👨</div>
+                    <div>
+                        <div style="font-weight: 700; color: white;">이O준 님</div>
+                        <div style="font-size: 0.85rem; color: rgba(255,255,255,0.8);">5세 아들 부모님 · 부산</div>
+                    </div>
+                </div>
+            </div>
+            <div style="background: var(--white); border-radius: 25px; padding: 2.5rem; box-shadow: var(--glass-shadow); border: 1px solid rgba(0,0,0,0.02);">
+                <div style="color: #FFD700; font-size: 1.1rem; margin-bottom: 1rem;">★★★★★</div>
+                <p style="color: var(--text-dark); line-height: 1.8; margin-bottom: 1.5rem; font-size: 1rem;">"유치원 선생님으로서 아이들에게 써봤는데, 물건 하나하나를 자세히 들여다보는 관찰력이 눈에 띄게 좋아졌어요. 어떤 물건이 어떤 주인공이 될지 맞춰보는 게 큰 놀이가 됐어요."</p>
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <div style="width: 45px; height: 45px; background: rgba(135,206,235,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">👩‍🏫</div>
+                    <div>
+                        <div style="font-weight: 700; color: var(--text-dark);">박O진 선생님</div>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">유치원 교사 · 경기</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Badge Section -->
+    <section style="background: #F8F9FA; padding: 5rem 0; border-top: 1px solid rgba(0,0,0,0.04);" id="research">
+        <div class="container">
+            <div class="section-header fade-up" style="margin-bottom: 3rem;">
+                <div class="badge">🔬 연구 기반</div>
+                <h2>과학이 뒷받침합니다</h2>
+                <p>포동의 경험 설계는 HCI 연구와 아동 발달 심리학에 기반합니다.</p>
+            </div>
+            <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap;" class="fade-up">
+                <div style="text-align: center; max-width: 200px;">
+                    <div style="width: 80px; height: 80px; background: rgba(255,126,103,0.1); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 2rem;">🏆</div>
+                    <div style="font-weight: 800; color: var(--text-dark);">HCIK 2026</div>
+                    <div style="font-size: 0.9rem; color: var(--text-light); margin-top: 0.3rem;">HCI학회 최우수상 논문</div>
+                </div>
+
+                <div style="text-align: center; max-width: 200px;">
+                    <div style="width: 80px; height: 80px; background: rgba(181,228,140,0.2); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 2rem;">🧠</div>
+                    <div style="font-weight: 800; color: var(--text-dark);">JME 기반 설계</div>
+                    <div style="font-size: 0.9rem; color: var(--text-light); margin-top: 0.3rem;">아동 발달 심리 연구 기반</div>
+                </div>
+                <div style="text-align: center; max-width: 200px;">
+                    <div style="width: 80px; height: 80px; background: rgba(142,68,173,0.1); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 2rem;">🛡️</div>
+                    <div style="font-weight: 800; color: var(--text-dark);">아동 안전 설계</div>
+                    <div style="font-size: 0.9rem; color: var(--text-light); margin-top: 0.3rem;">유해 콘텐츠 필터링 탑재</div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2.5rem;">
+                <a href="press.html" class="btn btn-secondary" style="display: inline-flex; align-items: center; gap: 0.5rem;"><i class="ri-article-line"></i> 연구 자료 자세히 보기</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mini FAQ Inline -->
+    <section class="container" id="mini-faq" style="padding: 5rem 0;">
+        <div class="section-header fade-up">
+            <h2>자주 물어보시는 것들</h2>
+        </div>
+        <div style="max-width: 750px; margin: 2.5rem auto 0; display: flex; flex-direction: column; gap: 1.5rem;" class="fade-up">
+            <details style="background: var(--white); border-radius: 20px; padding: 2rem; box-shadow: var(--glass-shadow); cursor: pointer;">
+                <summary style="font-weight: 700; font-size: 1.1rem; color: var(--text-dark); list-style: none; display: flex; justify-content: space-between; align-items: center;">몇 살 아이부터 사용할 수 있나요? <i class="ri-add-line" style="color: var(--primary);"></i></summary>
+                <p style="margin-top: 1rem; color: var(--text-light); line-height: 1.7;">만 3~12세에 최적화되어 있어요. 포동의 AI는 나이별 <b>6단계 언어 조율 알고리즘</b>을 갖추고 있어요. 영유아(3~4세)는 짧은 문장과 풍부한 의성어를, 6~8세는 원인·결과와 긴장감 있는 서사를, 초등학교 고학년(9~12세)은 주인공의 인간관계와 도덕적 딜레마를 가미한 깊이 있는 소설 형태로 자동 변경됩니다.</p>
+            </details>
+            <details style="background: var(--white); border-radius: 20px; padding: 2rem; box-shadow: var(--glass-shadow); cursor: pointer;">
+                <summary style="font-weight: 700; font-size: 1.1rem; color: var(--text-dark); list-style: none; display: flex; justify-content: space-between; align-items: center;">AI가 만드는 이야기, 아이에게 안전한가요? <i class="ri-add-line" style="color: var(--primary);"></i></summary>
+                <p style="margin-top: 1rem; color: var(--text-light); line-height: 1.7;">포동의 AI는 어린이 전용으로 설계되어 있어서 폭력, 공포, 선정적인 내용이 절대 생성되지 않아요. 생성된 모든 이야기는 아동 보호 필터를 거쳐서 나와요. 자세한 내용은 <a href="safety.html" style="color: var(--primary);">아동 안전 가이드</a>를 확인해주세요.</p>
+            </details>
+            <details style="background: var(--white); border-radius: 20px; padding: 2rem; box-shadow: var(--glass-shadow); cursor: pointer;">
+                <summary style="font-weight: 700; font-size: 1.1rem; color: var(--text-dark); list-style: none; display: flex; justify-content: space-between; align-items: center;">아이 얼굴이나 정보가 저장되나요? <i class="ri-add-line" style="color: var(--primary);"></i></summary>
+                <p style="margin-top: 1rem; color: var(--text-light); line-height: 1.7;">카메라로 찍힌 이미지는 이야기 생성 직후 서버에서 즉시 삭제되며, 어떤 개인 사진도 저장되지 않아요. 아이 이름은 기기 내에서만 저장되고 외부로 전송되지 않습니다.</p>
+            </details>
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="faq.html" style="color: var(--primary); font-weight: 700; text-decoration: none;">더 많은 질문 보기 →</a>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="container" id="cta">
+        <div class="cta-box fade-up">
+            <h2>오늘 밤, 우리 아이가 직접 만든 첫 동화를 읽어주세요.</h2>
+            <p>카메라를 들고 방 안을 탐험하는 순간, AI가 세상에 하나뿐인 이야기를 만들어드립니다.</p>
+            <a href="#" class="btn btn-secondary btn-lg"><i class="ri-apple-fill" style="margin-right:6px; font-size:1.4rem;"></i> App Store 무료 다운로드 (iOS / iPadOS)</a>
+        </div>
+    </section>
+
+    <!-- Sticky Bottom CTA -->
+    <div class="sticky-cta" id="stickyCta">
+        <div class="sticky-inner">
+            <div class="sticky-text">
+                <h4>포동과 함께 매일 밤 상상의 나래를 펴보세요!</h4>
+                <p>지금 가입하면 전체 기능 1개월 전면 무료</p>
+            </div>
+            <a href="#cta" class="btn btn-primary" style="padding: 0.8em 2em; font-size: 1.1rem; box-shadow: 0 5px 15px rgba(255,126,103,0.4);">
+                <i class="ri-rocket-2-fill"></i> 무료로 시작하기
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <h3 style="color: var(--text-dark); margin-bottom: 1rem;"><i class="ri-magic-line" style="color: var(--primary);"></i> 포동 (PHODONG)</h3>
+            <div style="margin-bottom: 1.5rem; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                <a href="privacy.html" style="color: var(--primary); text-decoration: none; font-weight: 700;">개인정보처리방침 (Privacy Policy)</a>
+                <a href="#" style="color: var(--text-light); text-decoration: none; font-weight: 600;">이용약관</a>
+                <a href="b2b.html" style="color: var(--text-light); text-decoration: none; font-weight: 600;">고객센터 및 제휴 문의</a>
+            </div>
+            <p>Copyright © 2026 Phodong Inc. All rights reserved.</p>
+            <div style="margin-top: 1rem; display: flex; gap: 1rem; justify-content: center;">
+                <a href="#" style="color: var(--text-light);"><i class="ri-instagram-line ri-xl"></i></a>
+                <a href="#" style="color: var(--text-light);"><i class="ri-kakao-talk-fill ri-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        // Sticky CTA Script
+        window.addEventListener('scroll', () => {
+            const stickyCta = document.getElementById('stickyCta');
+            if (window.scrollY > 500) {
+                stickyCta.classList.add('show');
+            } else {
+                stickyCta.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>

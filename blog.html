@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포동 블로그 - 교육 인사이트</title>
+    <meta name="description" content="아이의 창의력과 언어 발달에 도움이 되는 육아·교육 인사이트를 포동팀이 나눕니다.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        .blog-hero { background: linear-gradient(135deg, #FFF8F0 0%, #FFEEDD 100%); padding: 160px 0 80px; text-align: center; }
+        .blog-card { background: var(--white); border-radius: 25px; overflow: hidden; box-shadow: var(--glass-shadow); transition: var(--transition); }
+        .blog-card:hover { transform: translateY(-8px); }
+        .blog-thumb { height: 200px; display: flex; align-items: center; justify-content: center; font-size: 5rem; }
+        .blog-body { padding: 2rem; }
+        .blog-tag { display: inline-block; background: rgba(255,126,103,0.1); color: var(--primary); padding: 0.3em 0.9em; border-radius: 50px; font-size: 0.8rem; font-weight: 700; margin-bottom: 1rem; }
+    </style>
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo"><i class="ri-magic-line"></i><span>포동(PHODONG)</span></a>
+            <nav class="nav">
+                <a href="features.html">상세 기능</a>
+                <a href="about.html">팀 소개</a>
+                <a href="faq.html">FAQ</a>
+                <a href="b2b.html">기관 도입</a>
+                <a href="blog.html" style="color: var(--primary);">블로그</a>
+            </nav>
+            <div class="header-cta"><a href="#" class="btn btn-primary"><i class="ri-apple-fill"></i> 앱 다운로드</a></div>
+        </div>
+    </header>
+
+    <div class="blog-hero fade-up">
+        <div class="container">
+            <div class="badge">✍️ 포동 교육 인사이트</div>
+            <h1 style="font-size: 3rem; color: #1a202c; margin: 1.5rem 0;">더 좋은 부모가 되는 방법을 함께 찾아요</h1>
+            <p style="font-size: 1.2rem; color: #4a5568; max-width: 600px; margin: 0 auto;">아동 발달, 스마트 육아, 창의력 교육에 관한 이야기를 포동팀이 나눕니다.</p>
+        </div>
+    </div>
+
+    <section class="container fade-up" style="padding: 6rem 0;">
+        <div style="background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 30px; padding: 3.5rem; color: white; display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; align-items: center; margin-bottom: 4rem;">
+            <div>
+                <span style="background: rgba(255,255,255,0.2); padding: 0.4em 1em; border-radius: 50px; font-size: 0.85rem; font-weight: 700;">🌟 에디터 픽</span>
+                <h2 style="font-size: 2rem; color: white; margin: 1.5rem 0;">왜 유튜브 대신 포동인가: 수동적 시청과 능동적 경험의 차이</h2>
+                <p style="color: rgba(255,255,255,0.85); line-height: 1.7; margin-bottom: 2rem;">아이가 영상을 볼 때와 직접 이야기를 만들 때, 뇌에서 일어나는 일이 완전히 다릅니다. HCI 연구가 밝힌 능동적 미디어 경험의 효과를 알아봅니다.</p>
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <div style="width: 40px; height: 40px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">👩‍💻</div>
+                    <div><div style="font-weight: 700;">포동 리서치팀</div><div style="font-size: 0.85rem; opacity: 0.8;">2026.03.20 · 5분</div></div>
+                </div>
+            </div>
+            <div style="text-align: center; font-size: 7rem;">📺→📖</div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+            <div class="blog-card">
+                <div class="blog-thumb" style="background: linear-gradient(135deg, #FFE0D0, #FFC4A8);">🎨</div>
+                <div class="blog-body">
+                    <span class="blog-tag">창의력</span>
+                    <h3 style="font-size: 1.15rem; color: var(--text-dark); margin-bottom: 0.8rem; line-height: 1.4;">3세 아이 창의력 기르는 법 5가지</h3>
+                    <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">상상력은 타고나는 것이 아닙니다. 일상 속에서 키울 수 있는 구체적인 방법을 소개합니다.</p>
+                    <div style="font-size: 0.8rem; color: var(--text-light);">2026.03.15 · 3분</div>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-thumb" style="background: linear-gradient(135deg, #D0F0FF, #A8DCFF);">🌙</div>
+                <div class="blog-body">
+                    <span class="blog-tag" style="background: rgba(52,152,219,0.1); color: #3498db;">잠자리 루틴</span>
+                    <h3 style="font-size: 1.15rem; color: var(--text-dark); margin-bottom: 0.8rem; line-height: 1.4;">잠자리 독서, 이렇게 하면 달라져요</h3>
+                    <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">잠자리 30분이 아이의 언어 발달과 정서 안정을 좌우합니다. 그 황금 시간을 어떻게 쓸까요?</p>
+                    <div style="font-size: 0.8rem; color: var(--text-light);">2026.03.10 · 4분</div>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-thumb" style="background: linear-gradient(135deg, #D5F5E3, #A9DFBF);">📱</div>
+                <div class="blog-body">
+                    <span class="blog-tag" style="background: rgba(46,204,113,0.1); color: #27ae60;">스마트 기기</span>
+                    <h3 style="font-size: 1.15rem; color: var(--text-dark); margin-bottom: 0.8rem; line-height: 1.4;">스마트폰, 아이에게 줘도 될까요?</h3>
+                    <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">"얼마나", "어떻게" 쓰느냐가 핵심입니다. 올바른 디지털 미디어 사용 가이드입니다.</p>
+                    <div style="font-size: 0.8rem; color: var(--text-light);">2026.03.05 · 6분</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer"><div class="container"><h3 style="color: var(--text-dark); margin-bottom: 1rem;"><i class="ri-magic-line" style="color: var(--primary);"></i> 포동 (PHODONG)</h3><div style="margin-bottom: 1.5rem; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;"><a href="privacy.html" style="color: var(--primary); text-decoration: none; font-weight: 700;">개인정보처리방침</a><a href="safety.html" style="color: var(--text-light); text-decoration: none; font-weight: 600;">아동 안전 가이드</a><a href="b2b.html" style="color: var(--text-light); text-decoration: none; font-weight: 600;">제휴 문의</a></div><p>Copyright © 2026 Phodong Inc. All rights reserved.</p></div></footer>
+    <script src="app.js"></script>
+</body>
+</html>

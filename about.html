@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>팀 포동 소개 - PHODONG</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        .about-hero { padding: 140px 0 80px; text-align: center; background: linear-gradient(to bottom, var(--bg-color), #fff); }
+        .team-grid { 
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            gap: 2.5rem; 
+            margin: 4rem auto 8rem; 
+            max-width: 1200px;
+        }
+        .team-card { 
+            flex: 1 1 320px; 
+            max-width: 380px; 
+            background: var(--white); 
+            padding: 3.5rem 2.5rem; 
+            border-radius: 35px; 
+            box-shadow: 0 10px 30px rgba(43,45,66,0.03); 
+            text-align: center; 
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); 
+            border: 1px solid rgba(0,0,0,0.02); 
+            position: relative;
+        }
+        .team-card:hover { 
+            transform: translateY(-15px); 
+            box-shadow: 0 25px 50px rgba(0,0,0,0.08); 
+            border-color: rgba(255, 126, 103, 0.1); 
+        }
+        .team-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px; border-radius: 35px 35px 0 0;
+            opacity: 0; transition: var(--transition);
+        }
+        .team-card:hover::before { opacity: 1; }
+        
+        .card-ceo::before { background: var(--primary); }
+        .card-ux::before { background: var(--secondary); }
+        .card-biz::before { background: #5B8C2A; }
+        .card-sw::before { background: #8E44AD; }
+        .card-pd::before { background: #F39C12; }
+
+        .team-avatar { 
+            width: 110px; height: 110px; 
+            border-radius: 50%; 
+            display: flex; align-items: center; justify-content: center; 
+            font-size: 3.5rem; margin: 0 auto 1.5rem; 
+            transition: transform 0.3s;
+        }
+        .team-card:hover .team-avatar { transform: scale(1.05) rotate(5deg); }
+        
+        .team-role { font-weight: 800; font-size: 0.85rem; margin-bottom: 0.5rem; letter-spacing: 1px; text-transform: uppercase; }
+        .team-name { font-size: 1.6rem; color: var(--text-dark); margin-bottom: 1.5rem; }
+        .team-desc { color: var(--text-light); font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem; min-height: 100px; }
+        
+        .key-badge { 
+            display: inline-block; 
+            width: 100%;
+            padding: 1rem 1.2rem; 
+            background: rgba(0,0,0,0.02); 
+            border-radius: 18px; 
+            font-size: 0.9rem; 
+            color: var(--text-dark); 
+            text-align: left; 
+            line-height: 1.5; 
+            border: 1px solid rgba(0,0,0,0.03); 
+            transition: var(--transition);
+        }
+        .team-card:hover .key-badge { background: var(--white); box-shadow: 0 10px 20px rgba(0,0,0,0.05); border-color: rgba(0,0,0,0.08); }
+        .key-badge strong { 
+            color: var(--text-dark); 
+            display: flex; align-items: center; gap: 0.3rem;
+            margin-bottom: 0.4rem; font-size: 0.75rem; 
+            opacity: 0.6; text-transform: uppercase; letter-spacing: 1.5px; 
+        }
+
+        @media (max-width: 768px) {
+            .team-card { flex: 1 1 100%; max-width: 100%; min-height: auto; }
+            .team-desc { min-height: auto; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo"><i class="ri-magic-line"></i><span>포동(PHODONG)</span></a>
+            <nav class="nav">
+                <a href="demo.html">🎮 체험해보기</a>
+                <a href="features.html">상세 기능</a>
+                <a href="about.html" style="color: var(--primary);">팀 소개</a>
+                <a href="faq.html">FAQ</a>
+                <a href="b2b.html">기관 도입</a>
+                <a href="blog.html">블로그</a>
+            </nav>
+            <div class="header-cta">
+                <a href="index.html#cta" class="btn btn-primary"><i class="ri-apple-fill" style="margin-right:4px;"></i> App Store</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="about-hero fade-up">
+        <div class="container">
+            <div class="badge">Team & Vision</div>
+            <h1 class="gradient-text" style="font-size: 3.5rem; margin-bottom: 1.5rem;">아이들의 시간을 바꿔나갑니다</h1>
+            <p style="font-size: 1.25rem; max-width: 750px; margin: 0 auto; line-height: 1.8;">포동(PHODONG)은 수동적인 화면 시청을 넘어, 아이 스스로 현실에서 상상하고 부모와 상호작용하는 혁신적인 에듀테크를 선도합니다. 각 전문 분야 최고 수준의 글로벌 융합 역량을 갖춘 5명의 리더가 뭉쳐, 우리 아이들의 건강한 성장을 위해 밤낮으로 고민합니다.</p>
+        </div>
+    </div>
+
+    <main class="container fade-up">
+        <style>
+            .team-grid-uniform {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+                gap: 2rem;
+                max-width: 1100px;
+                margin: 0 auto;
+            }
+            .team-grid-uniform .team-card {
+                background: var(--white);
+                border-radius: 30px;
+                padding: 3rem 2.5rem;
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                box-shadow: var(--glass-shadow);
+                position: relative;
+                overflow: hidden;
+                border: 1px solid rgba(0,0,0,0.03);
+                transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+                cursor: pointer;
+                height: 100%;
+            }
+            .team-grid-uniform .team-card:hover {
+                transform: translateY(-8px) scale(1.01);
+                box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            }
+            @media (max-width: 900px) {
+                .team-grid-uniform .team-card {
+                    padding: 2.5rem;
+                }
+            }
+        </style>
+
+        <div class="team-grid-uniform fade-up">
+            
+            <!-- 1. CEO -->
+            <div class="team-card">
+                <div style="position: absolute; top: -30px; right: -30px; width: 180px; height: 180px; background: radial-gradient(circle, rgba(255,126,103,0.15) 0%, transparent 70%); border-radius: 50%; pointer-events: none;"></div>
+                
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; z-index: 1;">
+                    <img src="assets/team_avatars/ceo.png" alt="상상력 지휘관" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 3px solid var(--white); box-shadow: 0 10px 20px rgba(255,126,103,0.3);">
+                    <div>
+                        <div style="font-size: 0.75rem; font-weight: 800; color: var(--primary); letter-spacing: 1px;">상상력 지휘관</div>
+                        <div style="font-size: 0.95rem; color: var(--text-dark); font-weight: 700;">대표 / PM</div>
+                    </div>
+                </div>
+                <h3 style="font-size: 1.4rem; color: var(--text-dark); margin-bottom: 1rem; line-height: 1.4; letter-spacing: -0.5px; z-index: 1; font-weight: 800;">"화면의 자극 대신, 아이가 주인공이 되는 세상을 선물합니다."</h3>
+                <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-light); margin: 0; z-index: 1;">포동은 수익보다 우리 아이의 정서가 먼저입니다. 스마트폰에 뺏긴 시선을 거실의 장난감으로 돌려, 건강한 습관을 만들어갑니다.</p>
+            </div>
+
+            <!-- 2. CXO -->
+            <div class="team-card">
+                <div style="position: absolute; top: -30px; right: -30px; width: 180px; height: 180px; background: radial-gradient(circle, rgba(135,206,235,0.2) 0%, transparent 70%); border-radius: 50%; pointer-events: none;"></div>
+                
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; z-index: 1;">
+                    <img src="assets/team_avatars/cxo.png" alt="마음 탐험가" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 3px solid var(--white); box-shadow: 0 10px 20px rgba(135,206,235,0.4);">
+                    <div>
+                        <div style="font-size: 0.75rem; font-weight: 800; color: var(--secondary); letter-spacing: 1px;">마음 탐험가</div>
+                        <div style="font-size: 0.95rem; color: var(--text-dark); font-weight: 700;">UX 리서치 리드</div>
+                    </div>
+                </div>
+                <h3 style="font-size: 1.4rem; color: var(--text-dark); margin-bottom: 1rem; line-height: 1.4; letter-spacing: -0.5px; z-index: 1; font-weight: 800;">"작은 터치 하나에도 발달 심리학을 담습니다."</h3>
+                <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-light); margin: 0; z-index: 1;">아이가 누르고 듣는 모든 순간이 정서에 이롭도록, 철저한 인지 과학과 발달 심리를 적용하여 설계된 UI/UX만을 고집합니다.</p>
+            </div>
+
+            <!-- 3. CBO -->
+            <div class="team-card">
+                <div style="position: absolute; top: -30px; right: -30px; width: 180px; height: 180px; background: radial-gradient(circle, rgba(181,228,140,0.25) 0%, transparent 70%); border-radius: 50%; pointer-events: none;"></div>
+                
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; z-index: 1;">
+                    <img src="assets/team_avatars/cbo.png" alt="꿈의 연결자" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 3px solid var(--white); box-shadow: 0 10px 20px rgba(181,228,140,0.4);">
+                    <div>
+                        <div style="font-size: 0.75rem; font-weight: 800; color: #5B8C2A; letter-spacing: 1px;">꿈의 연결자</div>
+                        <div style="font-size: 0.95rem; color: var(--text-dark); font-weight: 700;">제휴 네트워크 리드</div>
+                    </div>
+                </div>
+                <h3 style="font-size: 1.4rem; color: var(--text-dark); margin-bottom: 1rem; line-height: 1.4; letter-spacing: -0.5px; z-index: 1; font-weight: 800;">"유치원과 집, 어디서든 마법이 끊이지 않게."</h3>
+                <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-light); margin: 0; z-index: 1;">안목 있는 유치원 및 전국 보육 기관들과의 단단한 협력을 통해, 아이의 일상 어디서든 포동의 교육적 가치가 지켜지도록 돕습니다.</p>
+            </div>
+            
+            <!-- 4. COO -->
+            <div class="team-card">
+                <div style="position: absolute; top: -30px; right: -30px; width: 180px; height: 180px; background: radial-gradient(circle, rgba(142,68,173,0.15) 0%, transparent 70%); border-radius: 50%; pointer-events: none;"></div>
+                
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; z-index: 1;">
+                    <img src="assets/team_avatars/coo.png" alt="마법성 건축가" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 3px solid var(--white); box-shadow: 0 10px 20px rgba(142,68,173,0.3);">
+                    <div>
+                        <div style="font-size: 0.75rem; font-weight: 800; color: #8E44AD; letter-spacing: 1px;">마법성 건축가</div>
+                        <div style="font-size: 0.95rem; color: var(--text-dark); font-weight: 700;">개발/보안 리드</div>
+                    </div>
+                </div>
+                <h3 style="font-size: 1.4rem; color: var(--text-dark); margin-bottom: 1rem; line-height: 1.4; letter-spacing: -0.5px; z-index: 1; font-weight: 800;">"엄마 아빠가 백 퍼센트 안심할 수 있도록."</h3>
+                <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-light); margin: 0; z-index: 1;">아이가 촬영한 집 안의 사진이나 일상 데이터가 절대 클라우드에 남지 않고 즉시 파기되도록, 완벽한 '무결점 암호화 로컬 시스템'을 감시합니다.</p>
+            </div>
+
+            <!-- 5. PD -->
+            <div class="team-card">
+                <div style="position: absolute; top: -30px; right: -30px; width: 180px; height: 180px; background: radial-gradient(circle, rgba(243,156,18,0.15) 0%, transparent 70%); border-radius: 50%; pointer-events: none;"></div>
+                
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; z-index: 1;">
+                    <img src="assets/team_avatars/pd.png" alt="동화 요정" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 3px solid var(--white); box-shadow: 0 10px 20px rgba(243,156,18,0.3);">
+                    <div>
+                        <div style="font-size: 0.75rem; font-weight: 800; color: #F39C12; letter-spacing: 1px;">동화 요정</div>
+                        <div style="font-size: 0.95rem; color: var(--text-dark); font-weight: 700;">교육 콘텐츠 PD</div>
+                    </div>
+                </div>
+                <h3 style="font-size: 1.4rem; color: var(--text-dark); margin-bottom: 1rem; line-height: 1.4; letter-spacing: -0.5px; z-index: 1; font-weight: 800;">"가장 따뜻하고 다정한 글자만을 아이에게."</h3>
+                <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-light); margin: 0; z-index: 1;">폭력적이거나 부적절한 스토리 생성을 원천 차단하는 강력한 아동 AI 필터를 기획하고, 바른 교훈을 담은 감동적인 세계관만을 엮어냅니다.</p>
+            </div>
+            
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <h3 style="color: var(--text-dark); margin-bottom: 1rem;"><i class="ri-magic-line" style="color: var(--primary);"></i> 포동 (PHODONG)</h3>
+            <div style="margin-bottom: 1.5rem; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                <a href="privacy.html" style="color: var(--text-light); text-decoration: none; font-weight: 600;">개인정보처리방침</a>
+                <a href="#" style="color: var(--text-light); text-decoration: none; font-weight: 600;">이용약관</a>
+                <a href="b2b.html" style="color: var(--text-light); text-decoration: none; font-weight: 600;">고객센터 및 제휴 문의</a>
+            </div>
+            <p>Copyright © 2026 Phodong Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

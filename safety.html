@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아동 안전 가이드 - PHODONG</title>
+    <meta name="description" content="포동은 아이들의 안전한 AI 경험을 최우선으로 설계했습니다. 콘텐츠 필터링, 개인정보 보호, 사용 시간 관리에 대해 알아보세요.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        .safety-hero { background: linear-gradient(135deg, #E8F8F5 0%, #D5F5E3 100%); padding: 160px 0 80px; text-align: center; }
+        .safety-pillar { background: var(--white); border-radius: 30px; padding: 3rem; box-shadow: var(--glass-shadow); border-top: 5px solid; }
+        .pledge-box { background: linear-gradient(135deg, #2ecc71, #27ae60); border-radius: 25px; padding: 3rem; color: white; text-align: center; }
+    </style>
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo"><i class="ri-magic-line"></i><span>포동(PHODONG)</span></a>
+            <nav class="nav">
+                <a href="features.html">상세 기능</a>
+                <a href="about.html">팀 소개</a>
+                <a href="faq.html">FAQ</a>
+                <a href="b2b.html">기관 도입</a>
+                <a href="safety.html" style="color: var(--primary);">안전 가이드</a>
+            </nav>
+            <div class="header-cta"><a href="#" class="btn btn-primary"><i class="ri-apple-fill"></i> 앱 다운로드</a></div>
+        </div>
+    </header>
+
+    <div class="safety-hero fade-up">
+        <div class="container">
+            <div class="badge" style="background: rgba(46,204,113,0.15); color: #27ae60; border: 1px solid rgba(46,204,113,0.3);">🛡️ 아이의 안전이 최우선입니다</div>
+            <h1 style="font-size: 3rem; color: #1a202c; margin: 1.5rem 0;">포동, 안심하고 쓸 수 있어요</h1>
+            <p style="font-size: 1.2rem; color: #4a5568; max-width: 600px; margin: 0 auto; line-height: 1.7;">"스마트폰 AI, 아이한테 줘도 괜찮을까?" 당연한 걱정이에요. 포동이 어떻게 설계되었는지 투명하게 알려드립니다.</p>
+        </div>
+    </div>
+
+    <!-- 3 Pillars -->
+    <section class="container fade-up" style="padding: 6rem 0;">
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+            <div class="safety-pillar" style="border-color: var(--primary);">
+                <i class="ri-filter-3-fill" style="font-size: 3rem; color: var(--primary); margin-bottom: 1.5rem; display: block;"></i>
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">콘텐츠 안전 필터</h3>
+                <p style="color: var(--text-light); line-height: 1.7; margin-bottom: 1.5rem;">포동의 AI는 어린이 전용 프롬프트로 설계되어 폭력·공포·선정적 내용을 생성하는 것이 구조적으로 불가능합니다. 생성된 모든 이야기는 추가 안전 레이어를 거쳐 출력됩니다.</p>
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.7rem;">
+                    <li style="display: flex; align-items: center; gap: 0.7rem; color: var(--text-dark);"><i class="ri-checkbox-circle-fill" style="color: var(--primary);"></i> 폭력·공포 묘사 생성 차단</li>
+                    <li style="display: flex; align-items: center; gap: 0.7rem; color: var(--text-dark);"><i class="ri-checkbox-circle-fill" style="color: var(--primary);"></i> 선정적 내용 시스템 레벨 차단</li>
+                    <li style="display: flex; align-items: center; gap: 0.7rem; color: var(--text-dark);"><i class="ri-checkbox-circle-fill" style="color: var(--primary);"></i> 모든 출력 이중 안전 검사</li>
+                </ul>
+            </div>
+            <div class="safety-pillar" style="border-color: #3498db;">
+                <i class="ri-lock-password-fill" style="font-size: 3rem; color: #3498db; margin-bottom: 1.5rem; display: block;"></i>
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">개인정보 무수집 원칙</h3>
+                <p style="color: var(--text-light); line-height: 1.7; margin-bottom: 1.5rem;">포동은 아이의 얼굴, 위치, 개인 사진을 수집하거나 저장하지 않습니다. 카메라로 스캔된 이미지는 캐릭터 생성 후 즉시 파기됩니다.</p>
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.7rem;">
+                    <li style="display: flex; align-items: center; gap: 0.7rem; color: var(--text-dark);"><i class="ri-checkbox-circle-fill" style="color: #3498db;"></i> 스캔 이미지 즉시 삭제</li>
+                    <li style="display: flex; align-items: center; gap: 0.7rem; color: var(--text-dark);"><i class="ri-checkbox-circle-fill" style="color: #3498db;"></i> 아이 이름은 기기 내 저장만</li>
+                    <li style="display: flex; align-items: center; gap: 0.7rem; color: var(--text-dark);"><i class="ri-checkbox-circle-fill" style="color: #3498db;"></i> 제3자 데이터 공유 없음</li>
+                </ul>
+            </div>
+            <div class="safety-pillar" style="border-color: #f39c12;">
+                <i class="ri-parent-fill" style="font-size: 3rem; color: #f39c12; margin-bottom: 1.5rem; display: block;"></i>
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">부모 중심 경험 설계</h3>
+                <p style="color: var(--text-light); line-height: 1.7; margin-bottom: 1.5rem;">포동은 아이 혼자 쓰는 앱이 아니에요. Joint Media Engagement(JME) 원칙에 따라 부모님이 옆에서 함께 참여하도록 경험이 설계되어 있습니다.</p>
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.7rem;">
+                    <li style="display: flex; align-items: center; gap: 0.7rem; color: var(--text-dark);"><i class="ri-checkbox-circle-fill" style="color: #f39c12;"></i> 부모-아이 공동 참여 구조</li>
+                    <li style="display: flex; align-items: center; gap: 0.7rem; color: var(--text-dark);"><i class="ri-checkbox-circle-fill" style="color: #f39c12;"></i> 독립 사용 유도 요소 없음</li>
+                    <li style="display: flex; align-items: center; gap: 0.7rem; color: var(--text-dark);"><i class="ri-checkbox-circle-fill" style="color: #f39c12;"></i> 대화 유도형 콘텐츠 설계</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Q&A -->
+    <section style="background: #f8f9fa; padding: 6rem 0;">
+        <div class="container fade-up" style="max-width: 800px;">
+            <div class="section-header" style="margin-bottom: 3rem;">
+                <h2>안전에 대해 자주 묻는 것들</h2>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                <details style="background: white; border-radius: 20px; padding: 2rem; box-shadow: var(--glass-shadow);">
+                    <summary style="font-weight: 700; font-size: 1.05rem; cursor: pointer;">카메라로 찍은 우리 집 사진이 어딘가에 저장되나요?</summary>
+                    <p style="margin-top: 1rem; color: var(--text-light); line-height: 1.7;">아니요. 카메라로 포착된 이미지는 포동 서버에서 캐릭터 정보를 추출하는 즉시 파기됩니다. 이미지 원본은 어디에도 저장되지 않으며, 사진 앨범에도 저장되지 않습니다.</p>
+                </details>
+                <details style="background: white; border-radius: 20px; padding: 2rem; box-shadow: var(--glass-shadow);">
+                    <summary style="font-weight: 700; font-size: 1.05rem; cursor: pointer;">아이가 잘못된 내용을 접할 수 있지 않나요?</summary>
+                    <p style="margin-top: 1rem; color: var(--text-light); line-height: 1.7;">포동의 AI는 '어린이 전용 시스템 프롬프트' 안에서만 동작하도록 설계되어 있어, 구조 자체가 부적절한 콘텐츠를 생성할 수 없습니다. 또한 출력 전 추가 안전 필터가 모든 콘텐츠를 검사합니다.</p>
+                </details>
+                <details style="background: white; border-radius: 20px; padding: 2rem; box-shadow: var(--glass-shadow);">
+                    <summary style="font-weight: 700; font-size: 1.05rem; cursor: pointer;">아이 이름 등 입력한 정보는 어디에 저장되나요?</summary>
+                    <p style="margin-top: 1rem; color: var(--text-light); line-height: 1.7;">입력된 이름과 나이 정보는 기기(iPhone/iPad) 내부 저장소에만 저장되며, 포동 서버로 전송되지 않습니다. 앱을 삭제하면 모든 정보가 기기에서 완전히 삭제됩니다.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pledge -->
+    <section class="container fade-up" style="padding: 6rem 0;">
+        <div class="pledge-box">
+            <i class="ri-shield-check-fill" style="font-size: 4rem; margin-bottom: 1.5rem; display: block;"></i>
+            <h2 style="color: white; font-size: 2rem; margin-bottom: 1rem;">포동의 아이 보호 서약</h2>
+            <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; line-height: 1.8; max-width: 600px; margin: 0 auto 2rem;">저희는 어린이의 안전한 디지털 경험이 부모님의 신뢰에서 시작된다고 믿습니다. 포동은 아이의 개인정보를 절대 수익화하지 않으며, 항상 아이의 건강한 성장을 최우선으로 서비스를 개선해 나갈 것을 약속합니다.</p>
+            <a href="privacy.html" class="btn" style="background: white; color: #27ae60; font-weight: 700; padding: 1em 2.5em; border-radius: 50px;">개인정보처리방침 전문 보기</a>
+        </div>
+    </section>
+
+    <footer class="footer"><div class="container"><h3 style="color: var(--text-dark); margin-bottom: 1rem;"><i class="ri-magic-line" style="color: var(--primary);"></i> 포동 (PHODONG)</h3><div style="margin-bottom: 1.5rem; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;"><a href="privacy.html" style="color: var(--primary); text-decoration: none; font-weight: 700;">개인정보처리방침</a><a href="safety.html" style="color: var(--text-light); text-decoration: none; font-weight: 600;">아동 안전 가이드</a><a href="b2b.html" style="color: var(--text-light); text-decoration: none; font-weight: 600;">제휴 문의</a></div><p>Copyright © 2026 Phodong Inc. All rights reserved.</p></div></footer>
+    <script src="app.js"></script>
+</body>
+</html>
