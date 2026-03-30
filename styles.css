@@ -67,6 +67,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
     font-size: 1.125rem;
+    line-height: 1.65;
     color: var(--text-light);
 }
 
@@ -186,7 +187,7 @@ section {
 
 .btn-primary:hover {
     transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 15px 30px rgba(255, 126, 103, 0.45); /* 강력한 Glow 효과 */
+    box-shadow: 0 15px 30px rgba(255, 126, 103, 0.45), 0 0 20px rgba(255, 126, 103, 0.6); /* 강력한 Glow 효과 */
 }
 
 .btn-secondary {
@@ -253,8 +254,9 @@ section {
 }
 
 @keyframes floatBg {
-    0% { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(50px, 50px) scale(1.1); }
+    0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+    50% { transform: translate(30px, -30px) scale(1.05) rotate(180deg); }
+    100% { transform: translate(-30px, 30px) scale(1) rotate(360deg); }
 }
 
 .hero-inner {
@@ -300,7 +302,7 @@ section {
 /* Mockup UI */
 .hero-visual {
     position: relative;
-    perspective: 1000px;
+    perspective: 1200px;
 }
 
 .mockup {
@@ -769,6 +771,117 @@ section {
 .dash-dot:nth-child(1) { background: #FF5F56; }
 .dash-dot:nth-child(2) { background: #FFBD2E; }
 .dash-dot:nth-child(3) { background: #27C93F; }
+
+/* Pricing Toggle Styles */
+.billing-toggle {
+    margin-top: 2.5rem;
+    display: inline-flex;
+    position: relative;
+    background: var(--white);
+    padding: 0.4rem;
+    border-radius: 50px;
+    box-shadow: var(--glass-shadow);
+    border: 2px solid #E9ECEF;
+    overflow: hidden;
+}
+
+.toggle-bg {
+    position: absolute;
+    top: 0.4rem;
+    left: 0.4rem;
+    width: calc(50% - 0.4rem);
+    height: calc(100% - 0.8rem);
+    background: linear-gradient(135deg, var(--primary) 0%, #FFA07A 100%);
+    border-radius: 40px;
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 1;
+}
+
+.billing-toggle.annual-active .toggle-bg {
+    transform: translateX(100%);
+}
+
+.toggle-btn {
+    position: relative;
+    z-index: 2;
+    border: none;
+    background: transparent;
+    color: var(--text-light);
+    border-radius: 40px;
+    padding: 0.6em 1.5em;
+    font-weight: 700;
+    transition: color 0.4s ease;
+}
+
+.toggle-btn.active {
+    color: var(--white);
+}
+
+.discount-badge {
+    font-size: 0.8rem;
+    color: var(--primary);
+    background: rgba(255,126,103,0.1);
+    padding: 4px 8px;
+    border-radius: 10px;
+    margin-left: 4px;
+    transition: all 0.4s ease;
+}
+
+.toggle-btn.active .discount-badge {
+    color: var(--white);
+    background: rgba(255,255,255,0.2);
+}
+
+/* App Previews Section */
+.previews-wrapper {
+    display: flex;
+    gap: 2.5rem;
+    justify-content: center;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.preview-card {
+    width: 260px;
+    flex-shrink: 0;
+    transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.preview-card:hover {
+    transform: translateY(-10px);
+}
+
+.preview-card.center-card {
+    transform: translateY(-20px);
+}
+
+.preview-card.center-card:hover {
+    transform: translateY(-30px);
+}
+
+.preview-img-container {
+    background: var(--white);
+    border-radius: 40px;
+    padding: 0.8rem;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.preview-img-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    display: block;
+}
+
+.preview-label {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-light);
+}
 
 /* Responsive */
 @media (max-width: 900px) {
