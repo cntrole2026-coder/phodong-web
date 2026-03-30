@@ -1,5 +1,5 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
-
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Jua&display=swap');
 :root {
     --primary: #FF7E67;
     --primary-hover: #E86B56;
@@ -39,6 +39,9 @@ body {
     word-break: keep-all;
     overflow-wrap: break-word;
 }
+
+.font-cute { font-family: 'Jua', sans-serif; font-weight: 400; }
+.font-story { font-family: 'Gowun Dodum', sans-serif; font-weight: 400; }
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {

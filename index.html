@@ -40,8 +40,8 @@
     <section class="hero" id="home">
         <div class="container hero-inner">
             <div class="hero-content fade-up visible">
-                <div class="badge">📖 오늘 밤 동화 고민, 이제 마지막으로</div>
-                <h1 class="hero-title">우리 아이만의<br><span class="gradient-text">특별한 동화가 생겨요.</span></h1>
+                <div class="badge font-cute">📖 오늘 밤 동화 고민, 이제 마지막으로</div>
+                <h1 class="hero-title font-cute">우리 아이만의<br><span class="gradient-text">특별한 동화가 생겨요.</span></h1>
                 <p class="hero-desc">집 안 물건에 카메라를 비추기만 하세요. 그 물건이 동화 속 주인공이 되어, 우리 아이 이름과 취향이 담긴 세상에 하나뿐인 이야기를 만들어드려요.</p>
                 <div class="hero-btns">
                     <a href="#cta" class="btn btn-primary btn-lg"><i class="ri-apple-fill" style="margin-right:6px; font-size:1.2rem;"></i> App Store에서 다운로드</a>
@@ -58,8 +58,8 @@
                         <i class="ri-bear-smile-fill mockup-icon"></i>
                     </div>
                     <div class="card-result">
-                        <h4><i class="ri-star-smile-fill"></i> 호기심 많은 곰돌이</h4>
-                        <p>"안녕! 소파 뒤에 숨어있던 나 생각 했니? 오늘 모험 매니저가 되어줘!"</p>
+                        <h4 class="font-cute"><i class="ri-star-smile-fill"></i> 호기심 많은 곰돌이</h4>
+                        <p class="font-story">"안녕! 소파 뒤에 숨어있던 나 생각 했니? 오늘 모험 매니저가 되어줘!"</p>
                     </div>
                 </div>
                 <div class="floating-bubble bubble-1"><i class="ri-book-read-fill"></i></div>
@@ -157,53 +157,59 @@
     <section class="pricing-section" id="pricing">
         <div class="container">
             <div class="section-header fade-up">
-                <h2>서비스 요금제</h2>
+                <h2 class="font-cute">서비스 요금제</h2>
                 <p>포동과 함께 아이의 상상력을 무한대로 키워보세요.</p>
             </div>
             <div class="pricing-grid">
                 <!-- Basic -->
                 <div class="pricing-card fade-up">
                     <div class="pricing-header">
-                        <h3>체험하기</h3>
+                        <h3 class="font-cute">베이직</h3>
                         <div class="price">무료</div>
                         <p>부담 없이 서비스 확인하기</p>
                     </div>
                     <ul class="pricing-features">
-                        <li><i class="ri-check-line"></i> 월 3회 동화 생성 체험</li>
-                        <li><i class="ri-check-line"></i> 3가지 기본 장르 이용</li>
-                        <li><i class="ri-check-line"></i> 부모님 목소리 1개 제한 (기본)</li>
+                        <li><i class="ri-check-line"></i> 주 3편 동화 생성</li>
+                        <li><i class="ri-check-line"></i> 아이 프로필 1명</li>
+                        <li><i class="ri-check-line"></i> 일반 부모 음성 낭독</li>
+                        <li style="opacity:0.4"><i class="ri-close-line"></i> <del>보이스 클로닝</del></li>
                     </ul>
                     <a href="#" class="btn btn-secondary" style="width: 100%;">시작하기</a>
                 </div>
-                <!-- Popular -->
-                <div class="pricing-card popular fade-up">
-                    <div class="badge" style="background: rgba(255,255,255,0.2); color: white; border: none;">베스트 초이스</div>
-                    <div class="pricing-header">
-                        <h3>베이직 구독</h3>
-                        <div class="price">₩4,900<span>/월</span></div>
-                        <p>매일 밤 다른 동화, 무제한으로</p>
-                    </div>
-                    <ul class="pricing-features">
-                        <li><i class="ri-check-fill"></i> <strong>무제한</strong> 동화 생성 가능</li>
-                        <li><i class="ri-check-fill"></i> 부모님 목소리 <strong>4개</strong> 다중 프로필 적용</li>
-                        <li><i class="ri-check-fill"></i> 12 장르 & 8 교육 목적 + 사물 도감 저장</li>
-                    </ul>
-                    <a href="#" class="btn btn-secondary" style="width: 100%; color: var(--text-dark);">구독하기</a>
-                </div>
-                <!-- Premium B2B -->
+                <!-- Pro -->
                 <div class="pricing-card fade-up">
                     <div class="pricing-header">
-                        <h3>기관 도입 (B2B)</h3>
-                        <div class="price">별도문의</div>
-                        <p>유치원·어린이집·도서관을 위한</p>
+                        <h3 class="font-cute">프로</h3>
+                        <div class="price">₩6,583<span>/월</span></div>
+                        <p>내 목소리 무제한 저장 공간</p>
                     </div>
                     <ul class="pricing-features">
-                        <li><i class="ri-check-line"></i> 원클릭 학급 관리 패널</li>
-                        <li><i class="ri-check-line"></i> 아이별 교육 활동 리포트</li>
-                        <li><i class="ri-check-line"></i> 프리미엄 동화 서재/출력</li>
+                        <li><i class="ri-check-fill" style="color:var(--primary)"></i> <strong>하루 5편</strong> 생성 / 아이 프로필 4명</li>
+                        <li><i class="ri-check-fill" style="color:var(--primary)"></i> <strong>내 목소리 클로닝</strong> 완전 개방</li>
+                        <li><i class="ri-check-fill" style="color:var(--primary)"></i> 부모님 목소리 <strong>4개</strong> 다중 저장</li>
+                        <li><i class="ri-check-fill" style="color:var(--primary)"></i> 한국어 + 영어 이중언어 지원</li>
                     </ul>
-                    <a href="b2b.html" class="btn btn-secondary" style="width: 100%;">기관 도입 문의 폼 제출</a>
+                    <a href="#" class="btn btn-primary" style="width: 100%;">구독하기</a>
                 </div>
+                <!-- Family -->
+                <div class="pricing-card popular fade-up">
+                    <div class="badge font-cute" style="background: rgba(255,255,255,0.2); color: white; border: none;">추천</div>
+                    <div class="pricing-header">
+                        <h3 class="font-cute">패밀리</h3>
+                        <div class="price">₩16,583<span>/월</span></div>
+                        <p>우주 최강 동화책 풀 패키지</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="ri-check-fill"></i> 프로 레이어의 <strong>모든 혜택</strong> 지원</li>
+                        <li><i class="ri-check-fill"></i> 동화 속 장면 <strong>AI 자동 삽화</strong></li>
+                        <li><i class="ri-check-fill"></i> 전체 국가 <strong>다국어</strong> 오디오 지원</li>
+                        <li><i class="ri-check-fill"></i> 실물 종이 동화책 <strong>50% 할인권</strong></li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary" style="width: 100%; color: var(--text-dark);">가족으로 합류하기</a>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2rem;" class="fade-up">
+                <a href="b2b.html" style="color: var(--text-light); text-decoration: underline; font-weight: 600; font-size: 0.95rem;">유치원·도서관을 위한 기관 도입(B2B) 문의하기 →</a>
             </div>
         </div>
     </section>
