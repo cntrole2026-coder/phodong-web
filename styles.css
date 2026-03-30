@@ -643,16 +643,18 @@ section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    align-items: center;
+    align-items: stretch;
 }
 
 .pricing-card {
     background: var(--bg-color);
     border-radius: 30px;
-    padding: 3rem 2.5rem;
+    padding: 2.2rem 2rem;
     text-align: center;
     border: 1px solid rgba(0, 0, 0, 0.03);
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
 }
 
 .pricing-card:hover {
@@ -662,12 +664,12 @@ section {
 .pricing-card.popular {
     background: var(--primary);
     color: var(--white);
-    transform: scale(1.05);
-    box-shadow: 0 20px 40px rgba(255, 126, 103, 0.2);
+    box-shadow: 0 30px 60px rgba(255, 126, 103, 0.35);
+    border: none;
 }
 
 .pricing-card.popular:hover {
-    transform: scale(1.05) translateY(-10px);
+    transform: translateY(-10px);
 }
 
 .pricing-header h3 {
@@ -710,16 +712,18 @@ section {
 
 .pricing-features {
     list-style: none;
-    margin: 2rem 0;
+    margin: 1.5rem 0;
     text-align: left;
+    flex: 1;
 }
 
 .pricing-features li {
-    margin-bottom: 1rem;
+    margin-bottom: 0.7rem;
     display: flex;
     align-items: center;
     gap: 0.8rem;
     font-weight: 500;
+    font-size: 0.95rem;
 }
 
 .pricing-features li i {
